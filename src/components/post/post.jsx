@@ -1,8 +1,9 @@
 import './Post.css';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import RepeatIcon from '@mui/icons-material/Repeat';
 
-export const PostTwitter = ({ userName }) => {
+export const PostTwitter = ({ userName, name }) => {
   return (
     <div className='post'>
       <div className='post-content'>
@@ -14,7 +15,7 @@ export const PostTwitter = ({ userName }) => {
         />
         <div className='post-details'>
           <div className='post-username-data'>
-            <b>{userName}</b> <span>@{userName} · 16h</span>
+            <b>{name}</b> <span>@{userName} · 16h</span>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae

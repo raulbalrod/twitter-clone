@@ -10,7 +10,11 @@ function App() {
 
       <div className='posts'>
         {githubUsers.map((user) => (
-          <PostTwitter userName={user} />
+          <PostTwitter
+            userName={user.githubName}
+            name={user.name}
+            key={user.id}
+          />
         ))}
       </div>
     </>
