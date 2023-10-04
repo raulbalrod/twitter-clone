@@ -1,11 +1,14 @@
 import './App.css';
-import { githubUsers } from './components/data/users';
+import { githubUsers } from './data/users';
+import { SideBar } from './components/menu/sideBar';
 import { PostTwitter } from './components/post/post';
 
 function App() {
   return (
     <>
-      <div>
+      <SideBar />
+
+      <div className='posts'>
         {githubUsers.map((user) => (
           <PostTwitter userName={user} />
         ))}

@@ -1,0 +1,38 @@
+.twitter-icon {
+    color: #1d9bf0;
+    transform: scale(1.2);
+}
+
+.sideBar-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.sideBar-option:hover {
+    background-color: rgba(232, 245, 254, 0.6);
+    border-radius: 30px;
+}
+
+
+.svg-sideBar {
+    padding: 20px;
+}
+
+.sideBar-option h3 {
+    font-weight: 900;
+    margin-right: 30px;
+}
+
+.sideBar-option--active {
+    color: #1d9bf0;
+}
+
+.sideBar-post {
+    background-color: #1d9bf0 !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    border-radius: 30px !important;
+    margin-top: 15px !important;
+}
