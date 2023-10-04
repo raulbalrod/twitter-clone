@@ -1,9 +1,13 @@
 import './Post.css';
 
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import RepeatIcon from '@mui/icons-material/Repeat';
-
-export const PostTwitter = ({ userName, name }) => {
+export const PostTwitter = ({
+  userName,
+  name,
+  CommentIcon,
+  RepeatIcon,
+  LikeIcon,
+  ViewsIcon,
+}) => {
   return (
     <div className='post'>
       <div className='post-content'>
@@ -27,10 +31,19 @@ export const PostTwitter = ({ userName, name }) => {
       </div>
 
       <ul>
-        <li>23</li>
-        <li>23</li>
-        <li>23</li>
-        <li>23</li>
+        <li>
+          <input type='checkbox' />
+          <CommentIcon />
+        </li>
+        <li>
+          <RepeatIcon />
+        </li>
+        <li>
+          <LikeIcon />
+        </li>
+        <li>
+          <ViewsIcon />
+        </li>
       </ul>
     </div>
   );
