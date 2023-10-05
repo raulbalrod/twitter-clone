@@ -12,7 +12,7 @@
   width: 40vw;
   height: max-content;
   padding: 15px;
-  border: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
 }
   
 .post .post-content {

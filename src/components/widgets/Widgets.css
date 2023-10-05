@@ -1,0 +1,25 @@
+.widgets {
+    flex: 0.3;
+    padding-left: 15px;
+}
+
+.subscription-premium {
+    color: #fff;
+    background-color: #1e2732;
+    padding: 15px;
+    border-radius: 20px;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-premium-btn {
+    background-color: #1d9bf0 !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    border-radius: 30px !important;
+    margin-top: 10px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    text-transform:capitalize !important;
+}

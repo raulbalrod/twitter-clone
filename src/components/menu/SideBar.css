@@ -42,4 +42,5 @@
     font-weight: 900 !important;
     border-radius: 30px !important;
     margin-top: 15px !important;
+    text-transform:capitalize !important;
 }
