@@ -43,7 +43,7 @@
 
 .post .post-details .post-img {
   border-radius: 25px;
-  width: 100%;
+  width: 95%;
 }
 
 .post ul li:nth-child(1):hover, .post ul li:nth-child(4):hover {
@@ -63,7 +63,11 @@
   background-color: rgba(25, 207, 134, 0.2);
 }
 
-.post .verified-profile {
+.post .verified {
   color: #1d9bf0;
   font-size: 18px;
+}
+
+.post .not-verified {
+  display: none;
 }

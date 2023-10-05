@@ -26,6 +26,7 @@ export const FeedTwitter = () => {
             userName={user.githubName}
             name={user.name}
             text={user.text}
+            isVerified={user.isVerified}
             mediaPost={user.mediaPost}
             Verified={VerifiedIcon}
             RepeatIcon={RepeatIcon}

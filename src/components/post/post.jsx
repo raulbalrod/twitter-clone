@@ -1,9 +1,11 @@
+import { Verified } from '@mui/icons-material';
+
 import './Post.css';
 
 export const PostTwitter = ({
   userName,
   name,
-  Verified,
+  isVerified,
   timePosted,
   text,
   mediaPost,
@@ -24,7 +26,12 @@ export const PostTwitter = ({
         />
         <div className='post-details'>
           <div className='post-username-data'>
-            <b>{name}</b> <Verified className='verified-profile' />
+            <b>{name}</b>{' '}
+            <Verified
+              className={`verified-profile ${
+                isVerified ? 'verified' : 'not-verified'
+              }`}
+            />
             <span>
               @{userName} · {timePosted}
             </span>
