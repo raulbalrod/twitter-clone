@@ -3,6 +3,10 @@ import './Post.css';
 export const PostTwitter = ({
   userName,
   name,
+  Verified,
+  timePosted,
+  text,
+  mediaPost,
   CommentIcon,
   RepeatIcon,
   LikeIcon,
@@ -13,26 +17,26 @@ export const PostTwitter = ({
       <div className='post-content'>
         <img
           src={`https://unavatar.io/${userName}`}
-          alt='avtar-profile-img'
-          width='80px'
-          height='80px'
+          alt='avatar-profile-img'
+          className='avatar-profile-img'
+          width='50px'
+          height='50px'
         />
         <div className='post-details'>
           <div className='post-username-data'>
-            <b>{name}</b> <span>@{userName} · 16h</span>
+            <b>{name}</b> <Verified className='verified-profile' />
+            <span>
+              @{userName} · {timePosted}
+            </span>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            repellendus voluptatem ullam repudiandae blanditiis provident qui
-            minima eos dicta corrupti, consectetur, eligendi ea ipsa sit
-            expedita voluptates assumenda ipsum aut.
-          </p>
+          <p>{text}</p>
+
+          <img src={mediaPost} className='post-img' alt='' />
         </div>
       </div>
 
       <ul>
         <li>
-          <input type='checkbox' />
           <CommentIcon />
         </li>
         <li>

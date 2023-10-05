@@ -16,7 +16,7 @@ import { Button } from '@mui/material';
 
 export const SideBar = () => {
   return (
-    <div>
+    <div className='sideBar'>
       <TwitterIcon className='twitter-icon' />
 
       <SideBarOption active Icon={HomeIcon} textIcon='Home' />

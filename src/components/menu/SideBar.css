@@ -1,6 +1,7 @@
-.twitter-icon {
-    color: #1d9bf0;
-    transform: scale(1.2);
+.sideBar {
+    padding: 10px;
+    border-right: 1px solid #dedede;
+    flex: 0.3;
 }
 
 .sideBar-option {
@@ -11,13 +12,19 @@
 }
 
 .sideBar-option:hover {
-    background-color: rgba(232, 245, 254, 0.6);
+    background-color: rgba(247, 249, 249, 0.1);
+    width: fit-content;
     border-radius: 30px;
 }
 
+.twitter-icon {
+    color: #1d9bf0;
+    transform: scale(1.5);
+    margin: 15px;
+}
 
 .svg-sideBar {
-    padding: 20px;
+    padding: 10px;
 }
 
 .sideBar-option h3 {
