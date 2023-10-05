@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { githubUsers } from '../../data/users';
 import './Widgets.css';
 
 import { SubscriptionsTwitter } from './subscription/subscription';
@@ -8,18 +8,21 @@ import { WhoToFollows } from './whoToFollow/whoToFollow';
 export const WidgetsTwitter = () => {
   return (
     <div className='widgets'>
-      <div className='subscription-premium'>
-        <h3>Suscribe to Premium</h3>
-        <span>
-          Subscribe to unlock new features and if eligible, receive a share of
-          ads revenue.
-        </span>
-        <Button className='subscribe-premium-btn'>Subscribe</Button>
-      </div>
+      {/*Seach users */}
 
       <SubscriptionsTwitter />
 
-      <WhoToFollows />
+      <div className='user-to-follow'>
+        <h3 style={{ color: '#fff' }}>Who to follow</h3>
+        {githubUsers.slice(0, 3).map((user) => (
+          <WhoToFollows
+            name={user.name}
+            userName={user.githubName}
+            isVerified={user.isVerified}
+            key={user.id}
+          />
+        ))}
+      </div>
 
       <TredingTopics />
     </div>

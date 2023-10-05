@@ -1,15 +1,29 @@
-export const WhoToFollows = () => {
+import { Verified } from '@mui/icons-material';
+
+export const WhoToFollows = ({ name, userName, isVerified }) => {
   return (
-    <div className='widgets'>
-      <div className='feed-header'>
-        <h2>Widgets</h2>
+    <div className='who-to-follow'>
+      <img
+        src={`https://unavatar.io/${userName}`}
+        alt='avatar-profile-img'
+        className='avatar-profile-img'
+        width='50px'
+        height='50px'
+      />
 
-        {/* Suscribe to Premium */}
-
-        {/* Who to follow */}
-
-        {/* Trending topics */}
+      <div className='follow-username-data'>
+        <div>
+          <b>{name}</b>
+          <Verified
+            className={`verified-profile ${
+              isVerified ? 'verified' : 'not-verified'
+            }`}
+          />
+        </div>
+        <span>@{userName}</span>
       </div>
+
+      <button className='follow-btn'>Follow</button>
     </div>
   );
 };
