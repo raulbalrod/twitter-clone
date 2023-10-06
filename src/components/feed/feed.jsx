@@ -10,6 +10,7 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 
 import { NewPostTwitter } from './postNewTwitte';
 import { homePosts } from '../../data/posts/homePosts';
+import { Link } from 'react-router-dom';
 
 export const FeedTwitter = () => {
   return (
@@ -24,19 +25,21 @@ export const FeedTwitter = () => {
 
       <div className='posts'>
         {homePosts.map((post) => (
-          <PostTwitter
-            userName={post.username}
-            name={post.name}
-            text={post.text}
-            isVerified={post.isVerified}
-            mediaPost={post.mediaPost}
-            Verified={VerifiedIcon}
-            RepeatIcon={RepeatIcon}
-            LikeIcon={FavoriteBorderIcon}
-            CommentIcon={ChatBubbleOutlineIcon}
-            ViewsIcon={EqualizerIcon}
-            key={post.id}
-          />
+          <Link to={`/${post.username}/status/${post.id}`}>
+            <PostTwitter
+              userName={post.username}
+              name={post.name}
+              text={post.text}
+              isVerified={post.isVerified}
+              mediaPost={post.mediaPost}
+              Verified={VerifiedIcon}
+              RepeatIcon={RepeatIcon}
+              LikeIcon={FavoriteBorderIcon}
+              CommentIcon={ChatBubbleOutlineIcon}
+              ViewsIcon={EqualizerIcon}
+              key={post.id}
+            />
+          </Link>
         ))}
       </div>
     </div>
