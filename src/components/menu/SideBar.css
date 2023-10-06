@@ -1,6 +1,5 @@
 .sideBar {
-    padding: 10px;
-    border-right: 1px solid #dedede;
+    padding: 15px;
     flex: 0.3;
 }
 
@@ -20,7 +19,13 @@
 .twitter-icon {
     color: #1d9bf0;
     transform: scale(1.5);
-    margin: 15px;
+    padding: 10px;
+}
+
+.twitter-icon:hover {
+    cursor: pointer;
+    background-color: rgba(247, 249, 249, 0.1);
+    border-radius: 50%;
 }
 
 .svg-sideBar {
@@ -37,10 +42,18 @@
 }
 
 .sideBar-post {
-    background-color: #1d9bf0 !important;
-    color: #fff !important;
-    font-weight: 900 !important;
-    border-radius: 30px !important;
-    margin-top: 15px !important;
-    text-transform:capitalize !important;
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform:capitalize;
+    margin-top: 15px;
+}
+.sideBar-post:hover {
+    cursor: pointer;
+    background-color: rgba(29, 156, 240, 0.9);
 }

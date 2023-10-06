@@ -1,5 +1,3 @@
-import { Button } from '@mui/material';
-
 export const NewPostTwitter = () => {
   return (
     <div className='new-post'>
@@ -15,7 +13,7 @@ export const NewPostTwitter = () => {
       <div>
         <input type='file' />
 
-        <Button className='feed-new-post-btn'>Post</Button>
+        <button className='feed-new-post-btn'>Post</button>
       </div>
     </div>
   );

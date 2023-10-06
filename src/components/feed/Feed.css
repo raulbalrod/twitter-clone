@@ -1,25 +1,24 @@
 .feed {
     flex: 0.4;
     min-width: fit-content;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    border-right: 1px solid #dedede;
     color: #fff;
 }
 
-.feed::-webkit-scrollbar {
-    display: none; 
+.header-feed {
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
 }
 
 .feed h2 {
-    padding-left: 15px;
+    padding: 15px;
+    margin: 0;
 }
 
 .new-post {
     padding: 10px;
-    border-bottom: 1px solid #dedede;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #dedede;
 }
 
 .new-post div:nth-child(1) {
@@ -52,14 +51,22 @@
 }
 
 .feed-new-post-btn {
-    background-color: #1d9bf0 !important;
-    color: #fff !important;
-    font-weight: 900 !important;
-    border-radius: 30px !important;
-    margin-top: 15px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    text-transform:capitalize !important;
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform:capitalize;
+    margin-top: 15px;
+}
+
+.feed-new-post-btn:hover {
+    cursor: pointer;
+    background-color: rgba(29, 156, 240, 0.9);
 }
 
 

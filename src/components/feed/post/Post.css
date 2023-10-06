@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 }
-  
+
 .post {
   color: #fff;
   display: flex;
@@ -12,7 +12,7 @@
   width: 40vw;
   height: max-content;
   padding: 15px;
-  border-bottom: 1px solid #dedede;
+  border: 1px solid #dedede;
 }
   
 .post .post-content {
@@ -45,22 +45,28 @@
   border-radius: 25px;
   width: 95%;
 }
+.post ul li {
+  padding: 5px;
+}
 
 .post ul li:nth-child(1):hover, .post ul li:nth-child(4):hover {
   cursor: pointer;
   color: #1d9bf0;
   background-color: rgba(29, 156, 240, 0.2);
+  border-radius: 50%;
 }
 
 .post ul li:nth-child(3):hover {
   cursor: pointer;
   color: #df245d;
   background-color: rgba(223, 36, 92, 0.2);
+  border-radius: 50%;
 }
 .post ul li:nth-child(2):hover {
   cursor: pointer;
   color: #19cf86;
   background-color: rgba(25, 207, 134, 0.2);
+  border-radius: 50%;
 }
 
 .post .verified {

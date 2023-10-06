@@ -17,30 +17,39 @@
 }
 
 .subscription-premium h3,
-.user-to-follow h3 {
+.user-to-follow h3,
+.trending-topics h3 {
     margin: 0;
 }
 
-.subscribe-premium-btn {
-    background-color: #1d9bf0 !important;
-    color: #fff !important;
-    font-weight: 900 !important;
-    border-radius: 30px !important;
-    margin-top: 10px !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-    text-transform: capitalize !important;
-    width: fit-content;
+.user-to-follow h3, .trending-topics h3  {
+    padding: 15px;
 }
 
-
+.subscribe-premium-btn {
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    width: 50%;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform:capitalize;
+    margin-top: 15px;
+}
+.subscribe-premium-btn:hover {
+    cursor: pointer;
+    background-color: rgba(29, 156, 240, 0.9);
+}
 .user-to-follow {
     display: flex;
     flex-direction: column;
     gap: 10px;
     color: #fff;
     background-color: #1e2732;
-    padding: 15px;
     border-radius: 20px;
    
 }
@@ -49,6 +58,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.user-to-follow .who-to-follow:hover {
+    background-color: #9e9fa12d;
 }
 
 .user-to-follow .who-to-follow img {
@@ -90,4 +106,47 @@
     border-radius: 20px;
     padding-left: 25px;
     padding-right: 25px;
+}
+
+.user-to-follow .show-more,
+.trending-topics .show-more {
+    color: #1d9bf0;
+    padding: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.user-to-follow .show-more:hover,
+.trending-topics .show-more:hover {
+    background-color: #9e9fa12d;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.trending-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #1e2732;
+    border-radius: 20px;
+} 
+
+.trending-topic {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.trending-topic:hover {
+    background-color: #9e9fa12d;
+}
+
+.trending-topic p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.565);
+    font-size: 12px;
+}
+
+.trending-topic b {
+    color: #fff;
 }

@@ -1,15 +1,11 @@
-export const TredingTopics = () => {
+export const TredingTopics = ({ category, title, posts, id }) => {
   return (
-    <div className='widgets'>
-      <div className='feed-header'>
-        <h2>Widgets</h2>
-
-        {/* Suscribe to Premium */}
-
-        {/* Who to follow */}
-
-        {/* Trending topics */}
-      </div>
+    <div className='trending-topic'>
+      <p>
+        {id} ·{category} · Trending
+      </p>
+      <b>{title}</b>
+      <p>{posts} posts</p>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import './Feed.css';
 
-import { githubUsers } from '../../data/users';
-import { PostTwitter } from '../post/post';
+import { PostTwitter } from './post/post';
 
 import RepeatIcon from '@mui/icons-material/Repeat';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -10,30 +9,33 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 import { NewPostTwitter } from './postNewTwitte';
+import { homePosts } from '../../data/posts/homePosts';
 
 export const FeedTwitter = () => {
   return (
     <div className='feed'>
-      <h2>Home</h2>
+      <div className='header-feed'>
+        <h2>Home</h2>
 
-      <div className='post-new-twitte'>
-        <NewPostTwitter />
+        <div className='post-new-twitte'>
+          <NewPostTwitter />
+        </div>
       </div>
 
       <div className='posts'>
-        {githubUsers.map((user) => (
+        {homePosts.map((post) => (
           <PostTwitter
-            userName={user.githubName}
-            name={user.name}
-            text={user.text}
-            isVerified={user.isVerified}
-            mediaPost={user.mediaPost}
+            userName={post.username}
+            name={post.name}
+            text={post.text}
+            isVerified={post.isVerified}
+            mediaPost={post.mediaPost}
             Verified={VerifiedIcon}
             RepeatIcon={RepeatIcon}
             LikeIcon={FavoriteBorderIcon}
             CommentIcon={ChatBubbleOutlineIcon}
             ViewsIcon={EqualizerIcon}
-            key={user.id}
+            key={post.id}
           />
         ))}
       </div>

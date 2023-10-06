@@ -1,5 +1,3 @@
-import { Button } from '@mui/material';
-
 export const SubscriptionsTwitter = () => {
   return (
     <div className='subscription-premium'>
@@ -8,7 +6,7 @@ export const SubscriptionsTwitter = () => {
         Subscribe to unlock new features and if eligible, receive a share of ads
         revenue.
       </span>
-      <Button className='subscribe-premium-btn'>Subscribe</Button>
+      <button className='subscribe-premium-btn'>Subscribe</button>
     </div>
   );
 };

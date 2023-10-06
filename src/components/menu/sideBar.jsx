@@ -12,8 +12,6 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-import { Button } from '@mui/material';
-
 export const SideBar = () => {
   return (
     <div className='sideBar'>
@@ -29,9 +27,7 @@ export const SideBar = () => {
       <SideBarOption Icon={PersonOutlineIcon} textIcon='Profile' />
       <SideBarOption Icon={MoreHorizIcon} textIcon='More' />
 
-      <Button className='sideBar-post' fullWidth>
-        Post
-      </Button>
+      <button className='sideBar-post'>Post</button>
     </div>
   );
 };

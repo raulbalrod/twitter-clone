@@ -1,30 +1,63 @@
-import { githubUsers } from '../../data/users';
+import { newUsers } from '../../data/widgets/newUsers';
+import { trendingTopics } from '../../data/widgets/trendingTopics';
 import './Widgets.css';
 
 import { SubscriptionsTwitter } from './subscription/subscription';
 import { TredingTopics } from './trendingTopics/trendingTopics';
 import { WhoToFollows } from './whoToFollow/whoToFollow';
 
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 export const WidgetsTwitter = () => {
+  const randomUsers = [];
+
+  while (randomUsers.length < 3) {
+    const randomIndex = getRandomIndex(newUsers);
+    const randomUser = newUsers[randomIndex];
+
+    if (!randomUsers.includes(randomUser)) {
+      randomUsers.push(randomUser);
+    }
+  }
+
   return (
     <div className='widgets'>
-      {/*Seach users */}
+      {/* Seach users */}
 
       <SubscriptionsTwitter />
 
       <div className='user-to-follow'>
         <h3 style={{ color: '#fff' }}>Who to follow</h3>
-        {githubUsers.slice(0, 3).map((user) => (
+        {randomUsers.map((user) => (
           <WhoToFollows
             name={user.name}
-            userName={user.githubName}
+            userName={user.username}
             isVerified={user.isVerified}
             key={user.id}
           />
         ))}
+
+        {/* Show more */}
+        <span className='show-more'>Show more</span>
       </div>
 
-      <TredingTopics />
+      <div className='trending-topics'>
+        <h3 style={{ color: '#fff' }}>Trending Topics</h3>
+        {trendingTopics.slice(0, 5).map((topic) => (
+          <TredingTopics
+            id={topic.id}
+            category={topic.category}
+            title={topic.title}
+            posts={topic.posts}
+            key={topic.id}
+          />
+        ))}
+
+        {/* Show more */}
+        <span className='show-more'>Show more</span>
+      </div>
     </div>
   );
 };
