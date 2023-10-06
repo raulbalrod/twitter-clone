@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { newUsers } from '../../data/widgets/newUsers';
 import { trendingTopics } from '../../data/widgets/trendingTopics';
 import './Widgets.css';
@@ -39,8 +40,13 @@ export const WidgetsTwitter = () => {
           />
         ))}
 
-        {/* Show more */}
-        <span className='show-more'>Show more</span>
+        <Link
+          className='show-more'
+          to='/connect_people'
+          style={{ textDecoration: 'none' }}
+        >
+          <span>Show more</span>
+        </Link>
       </div>
 
       <div className='trending-topics'>
@@ -55,8 +61,13 @@ export const WidgetsTwitter = () => {
           />
         ))}
 
-        {/* Show more */}
-        <span className='show-more'>Show more</span>
+        <Link
+          className='show-more'
+          to='/trends'
+          style={{ textDecoration: 'none' }}
+        >
+          <span>Show more</span>
+        </Link>
       </div>
     </div>
   );

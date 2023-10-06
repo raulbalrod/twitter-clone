@@ -25,7 +25,10 @@ export const FeedTwitter = () => {
 
       <div className='posts'>
         {homePosts.map((post) => (
-          <Link to={`/${post.username}/status/${post.id}`}>
+          <Link
+            to={`/${post.username}/status/${post.id}`}
+            style={{ textDecoration: 'none' }}
+          >
             <PostTwitter
               userName={post.username}
               name={post.name}

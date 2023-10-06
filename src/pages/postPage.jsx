@@ -1,5 +1,3 @@
-import '../App.css';
-
 import { useParams } from 'react-router-dom';
 
 import RepeatIcon from '@mui/icons-material/Repeat';
@@ -14,9 +12,9 @@ import { getPostDestails } from '../utils/post';
 import { PostTwitter } from '../components/feed/post/post';
 
 export const IndividualPostPage = () => {
-  const { postUserName } = useParams();
+  const { usernamePost } = useParams();
 
-  const post = getPostDestails(postUserName);
+  const post = getPostDestails(usernamePost);
 
   return (
     <div className='app'>

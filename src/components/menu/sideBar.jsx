@@ -11,13 +11,19 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { Link } from 'react-router-dom';
 
 export const SideBar = () => {
   return (
     <div className='sideBar'>
-      <TwitterIcon className='twitter-icon' />
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <TwitterIcon className='twitter-icon' />
+      </Link>
 
-      <SideBarOption active Icon={HomeIcon} textIcon='Home' />
+      <Link to='/home' style={{ textDecoration: 'none' }}>
+        <SideBarOption active Icon={HomeIcon} textIcon='Home' />
+      </Link>
+
       <SideBarOption Icon={TagIcon} textIcon='Explore' />
       <SideBarOption Icon={NotificationsIcon} textIcon='Notifications' />
       <SideBarOption Icon={MailOutlineIcon} textIcon='Messages' />
