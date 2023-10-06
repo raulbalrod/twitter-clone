@@ -1,19 +1,15 @@
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { SideBar } from './components/menu/sideBar';
-
-import { FeedTwitter } from './components/feed/feed';
-import { WidgetsTwitter } from './components/widgets/widgets';
+import { HomePage } from './pages/home';
 
 function App() {
   return (
-    <div className='app'>
-      <SideBar />
-
-      <FeedTwitter />
-
-      <WidgetsTwitter />
-    </div>
+    <BrowserRouter basename='/'>
+      <Routes>
+        <Route path='/home' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
