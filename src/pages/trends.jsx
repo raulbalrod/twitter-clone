@@ -1,6 +1,6 @@
 import { SideBar } from '../components/menu/sideBar';
 import { TredingTopicsPage } from '../components/widgets/trendingTopics/trendingPage';
-import { WidgetsTwitter } from '../components/widgets/widgets';
+import { WidgetsTwitterTrendings } from '../components/widgets/widgetsTrends';
 import { trendingTopics } from '../data/widgets/trendingTopics';
 
 export const TrendsPage = () => {
@@ -24,7 +24,7 @@ export const TrendsPage = () => {
         </div>
       </div>
 
-      <WidgetsTwitter />
+      <WidgetsTwitterTrendings />
     </div>
   );
 };

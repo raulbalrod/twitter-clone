@@ -1,6 +1,7 @@
 import { Verified } from '@mui/icons-material';
 
 import './Reply.css';
+import { IteractionPost } from '../iteractionPost';
 
 export const Replys = ({
   userName,
@@ -39,20 +40,12 @@ export const Replys = ({
         </div>
       </div>
 
-      <ul>
-        <li>
-          <CommentIcon />
-        </li>
-        <li>
-          <RepeatIcon />
-        </li>
-        <li>
-          <LikeIcon />
-        </li>
-        <li>
-          <ViewsIcon />
-        </li>
-      </ul>
+      <IteractionPost
+        CommentIcon={CommentIcon}
+        RepeatIcon={RepeatIcon}
+        LikeIcon={LikeIcon}
+        ViewsIcon={ViewsIcon}
+      />
     </div>
   );
 };

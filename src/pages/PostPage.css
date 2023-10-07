@@ -26,6 +26,11 @@
 .individual-post .individual-post-content {
     display: flex;
     gap: 16px;
+    cursor: pointer;
+}
+
+.individual-post .individual-post-content b:hover {
+    text-decoration: underline;
 }
     
 .individual-post ul {

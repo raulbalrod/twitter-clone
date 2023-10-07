@@ -30,9 +30,9 @@
     gap: 14px;
 }
     
-  .reply .reply-details .reply-username-data span {
+.reply .reply-details .reply-username-data span {
     color: #dedede9f;
-  }
+}
   
   .reply .reply-details .reply-img {
     border-radius: 25px;

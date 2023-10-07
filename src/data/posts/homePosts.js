@@ -145,12 +145,12 @@ export const homePosts = [
     },
     {
       id: 1019,
-      name: "Raul Torres",
-      username: "RaulT",
+      name: "Raul Sanchez",
+      username: "rmsanchez93",
       text: "Cheering on my chess team in the tournament. Let's go for the win! ♟️🏆 #Chess #Strategy",
       isVerified: false,
       mediaPost: "https://assetsio.reedpopcdn.com/chess-playing-hand.jpeg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
     }
-  ];
+];
   
   

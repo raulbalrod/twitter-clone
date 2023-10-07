@@ -1,6 +1,7 @@
 import { Verified } from '@mui/icons-material';
 
 import './Post.css';
+import { IteractionPost } from '../../iteractionPost';
 
 export const PostTwitter = ({
   userName,
@@ -42,20 +43,12 @@ export const PostTwitter = ({
         </div>
       </div>
 
-      <ul>
-        <li>
-          <CommentIcon />
-        </li>
-        <li>
-          <RepeatIcon />
-        </li>
-        <li>
-          <LikeIcon />
-        </li>
-        <li>
-          <ViewsIcon />
-        </li>
-      </ul>
+      <IteractionPost
+        CommentIcon={CommentIcon}
+        RepeatIcon={RepeatIcon}
+        LikeIcon={LikeIcon}
+        ViewsIcon={ViewsIcon}
+      />
     </div>
   );
 };

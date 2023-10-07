@@ -1,10 +1,11 @@
 import { Verified } from '@mui/icons-material';
+import { IteractionPost } from '../iteractionPost';
 
 export const IndividualPost = ({
   userName,
   name,
   isVerified,
-  timePosted,
+  datePosted,
   views,
   text,
   mediaPost,
@@ -38,7 +39,6 @@ export const IndividualPost = ({
           </div>
         </div>
       </div>
-
       <div className='content-indivual-post'>
         <p>{text}</p>
 
@@ -51,20 +51,12 @@ export const IndividualPost = ({
         </div>
       </div>
 
-      <ul>
-        <li>
-          <CommentIcon />
-        </li>
-        <li>
-          <RepeatIcon />
-        </li>
-        <li>
-          <LikeIcon />
-        </li>
-        <li>
-          <ViewsIcon />
-        </li>
-      </ul>
+      <IteractionPost
+        CommentIcon={CommentIcon}
+        RepeatIcon={RepeatIcon}
+        LikeIcon={LikeIcon}
+        ViewsIcon={ViewsIcon}
+      />
     </div>
   );
 };

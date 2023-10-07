@@ -4,6 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 1px solid #dedede9f;
+  border-left: 1px solid #dedede9f;
 }
 
 .post {
@@ -12,7 +14,7 @@
   flex-direction: column;
   height: max-content;
   padding: 15px;
-  border: 1px solid #dedede9f;
+  border-bottom: 1px solid #dedede9f;
 }
   
 .post .post-content {
@@ -36,7 +38,11 @@
   align-items: center;
   gap: 14px;
 }
-  
+
+.post .post-details .post-username-data b:hover {
+  text-decoration: underline;
+}
+
 .post .post-details .post-username-data span {
   color: #dedede9f;
 }
