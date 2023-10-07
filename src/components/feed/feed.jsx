@@ -24,7 +24,7 @@ export const FeedTwitter = () => {
       </div>
 
       <div className='posts'>
-        {homePosts.map((post) => (
+        {homePosts.reverse().map((post) => (
           <Link
             to={`/${post.username}/status/${post.id}`}
             style={{ textDecoration: 'none' }}

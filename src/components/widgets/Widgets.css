@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 15px;
     padding: 15px;
+    width: 400px;
 }
 
 .subscription-premium {
@@ -40,10 +41,12 @@
     text-transform:capitalize;
     margin-top: 15px;
 }
+
 .subscribe-premium-btn:hover {
     cursor: pointer;
     background-color: rgba(29, 156, 240, 0.9);
 }
+
 .user-to-follow {
     display: flex;
     flex-direction: column;
@@ -87,7 +90,7 @@
 }
 
 .user-to-follow .who-to-follow span {
-    color: rgba(255, 255, 255, 0.565);
+    color: #dedede9f;
 }
 
 .who-to-follow .verified {
@@ -101,11 +104,12 @@
 
 .who-to-follow .follow-btn {
     border: none;
-    font-weight: 900;
+    font-weight: 700;
     height: 30px;
     border-radius: 20px;
     padding-left: 25px;
     padding-right: 25px;
+    cursor: pointer;
 }
 
 .user-to-follow .show-more,
@@ -135,6 +139,7 @@
 .trending-topic {
     padding: 5px;
     cursor: pointer;
+    padding-left: 14px;
 }
 
 .trending-topic:hover {
@@ -143,10 +148,14 @@
 
 .trending-topic p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.565);
+    color: #dedede9f;
     font-size: 12px;
 }
 
 .trending-topic b {
     color: #fff;
+}
+
+.follow-username-data b:hover {
+    text-decoration: underline;
 }

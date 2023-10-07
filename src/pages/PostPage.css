@@ -1,0 +1,100 @@
+
+.individual-posts {
+    color: #fff;
+    width: 600px;
+}
+
+.feed-replys {
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+}
+
+.individual-post {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 15px;
+}
+
+.individual-posts h2 {
+    margin: 0;
+    padding: 14px; 
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+}
+    
+.individual-post .individual-post-content {
+    display: flex;
+    gap: 16px;
+}
+    
+.individual-post ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+    
+.individual-post .avatar-profile-img {
+    border-radius: 50%;
+}
+    
+.individual-post .individual-post-details .individual-post-username-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+    
+.individual-post .individual-post-details .individual-post-username-data span {
+    color: #dedede9f;
+}
+  
+.content-indivual-post .individual-post-img {
+    border-radius: 25px;
+    width: 95%;
+}
+  
+.individual-post ul  {
+    padding: 10px;
+    margin: 5px;
+    border-top: 1px solid #dedede9f;
+    border-bottom: 1px solid #dedede9f;
+}
+  
+.individual-post ul li:nth-child(1):hover, .individual-post ul li:nth-child(4):hover {
+    cursor: pointer;
+    color: #1d9bf0;
+    background-color: rgba(29, 156, 240, 0.2);
+    border-radius: 50%;
+}
+  
+.individual-post ul li:nth-child(3):hover {
+    cursor: pointer;
+    color: #df245d;
+    background-color: rgba(223, 36, 92, 0.2);
+    border-radius: 50%;
+}
+  
+.individual-post ul li:nth-child(2):hover {
+    cursor: pointer;
+    color: #19cf86;
+    background-color: rgba(25, 207, 134, 0.2);
+    border-radius: 50%;
+}
+  
+.individual-post .verified {
+    color: #1d9bf0;
+    font-size: 18px;
+}
+  
+.individual-post .not-verified {
+    display: none;
+}
+
+.content-indivual-post .details-post-publication p {
+    color: #dedede9f;
+    font-size: 15px;
+}
+
+.content-indivual-post .details-post-publication b {
+    color: #fff;
+}

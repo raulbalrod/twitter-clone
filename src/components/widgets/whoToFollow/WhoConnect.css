@@ -1,0 +1,78 @@
+.new-users {
+    width: 600px;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.new-users h2 {
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+    padding: 15px;
+    margin: 0;
+}
+
+.who-connect-page {
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+.who-connect-page img {
+    border-radius: 50%;
+}
+
+.who-connect-details-users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.who-connect-details-users div {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.who-connect-details-users div .verified-who-connect {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.who-connect-details-users div span {
+    color: #dedede9f;
+}
+
+.who-connect-details-users  .verified {
+    color: #1d9bf0;
+    font-size: 18px;
+}
+  
+.who-connect-details-users  .not-verified {
+    display: none;
+}
+
+
+.who-connect-details-users .follow-btn {
+    border: none;
+    font-weight: 700;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.who-connect-page p {
+    font-size: 14px;
+}
+
+.verified-who-connect b:hover {
+    text-decoration: underline;
+}

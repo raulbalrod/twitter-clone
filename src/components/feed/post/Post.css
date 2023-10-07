@@ -1,4 +1,5 @@
 .posts {
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,10 +10,9 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  width: 40vw;
   height: max-content;
   padding: 15px;
-  border: 1px solid #dedede;
+  border: 1px solid #dedede9f;
 }
   
 .post .post-content {
@@ -38,13 +38,14 @@
 }
   
 .post .post-details .post-username-data span {
-  color: rgba(255, 255, 255, 0.565);
+  color: #dedede9f;
 }
 
 .post .post-details .post-img {
   border-radius: 25px;
   width: 95%;
 }
+
 .post ul li {
   padding: 5px;
 }

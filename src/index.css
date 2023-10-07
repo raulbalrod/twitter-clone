@@ -7,7 +7,9 @@ body {
 }
 
 .new-post div:nth-child(1) input, 
-.feed-new-post-btn, .sideBar-post,.subscribe-premium-btn {
+.feed-new-post-btn, .sideBar-post,.subscribe-premium-btn,
+.who-connect-details-users .follow-btn, 
+.who-to-follow .follow-btn {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

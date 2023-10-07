@@ -3,6 +3,44 @@
     margin: auto;
     height: 100vh;
     max-width: fit-content;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.all-trending-topics {    
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+}
+
+.all-trends {
+    color: #fff;
+    width: 600px;
+}
+
+.all-trends h2 {
+    margin: 0;
+    padding: 14px;    
+    border-right: 1px solid #dedede9f;
+    border-left: 1px solid #dedede9f;
+}
+
+
+.trending-pages {
+    padding: 5px;
+    cursor: pointer;
+    padding-left: 14px;
+}
+
+.trending-pages:hover {
+    background-color: #9e9fa12d;
+}
+
+.trending-pages p {
+    margin: 0;
+    color: #dedede9f;
+    font-size: 12px;
+}
+
+.trending-pages b {
+    color: #fff;
 }
