@@ -3,20 +3,24 @@ export const IteractionPost = ({
   RepeatIcon,
   LikeIcon,
   ViewsIcon,
+  numsComments,
+  numsRetweets,
+  numsLikes,
+  numsViews,
 }) => {
   return (
     <ul>
       <li>
-        <CommentIcon />
+        <CommentIcon /> {numsComments}
       </li>
       <li>
-        <RepeatIcon />
+        <RepeatIcon /> {numsRetweets}
       </li>
       <li>
-        <LikeIcon />
+        <LikeIcon /> {numsLikes}
       </li>
       <li>
-        <ViewsIcon />
+        <ViewsIcon /> {numsViews}
       </li>
     </ul>
   );

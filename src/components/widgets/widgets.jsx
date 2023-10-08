@@ -30,7 +30,7 @@ export const WidgetsTwitter = () => {
       <SubscriptionsTwitter />
 
       <div className='user-to-follow'>
-        <h3 style={{ color: '#fff' }}>Who to follow</h3>
+        <h3>Who to follow</h3>
         {randomUsers.map((user) => (
           <WhoToFollows
             name={user.name}
@@ -50,7 +50,7 @@ export const WidgetsTwitter = () => {
       </div>
 
       <div className='trending-topics'>
-        <h3 style={{ color: '#fff' }}>Trending Topics</h3>
+        <h3>Trending Topics</h3>
         {trendingTopics.slice(0, 5).map((topic) => (
           <TredingTopics
             id={topic.id}

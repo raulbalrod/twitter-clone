@@ -4,217 +4,394 @@ export const homePosts = [
     username: "torvalds",
     name: "Linus Torvalds",
     text: "Finnish-American software engineer best known as the creator of the Linux kernel, which serves as the foundation of the Linux operating system. Linus Torvalds is a pioneering figure in the open-source software community.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 80,
+    numsRetweets: 55,
+    numsLikes: '5,342',
+    numsViews: '92.1k'
   },
   {
     id: 2,
     username: "brendaneich",
     name: "Brendan Eich",
     text: "American technologist who is renowned for his role in creating the JavaScript programming language. Brendan Eich has made significant contributions to web development and browser technology.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 72,
+    numsRetweets: 49,
+    numsLikes: '4,987',
+    numsViews: '88.4k'
   },
   {
     id: 3,
     username: "gvanrossum",
     name: "Guido van Rossum",
     text: "Dutch programmer widely recognized as the creator of the Python programming language. Guido van Rossum's work has had a profound impact on the world of software development.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 67,
+    numsRetweets: 52,
+    numsLikes: '5,116',
+    numsViews: '91.7k'
   },
   {
     id: 4,
     username: "timbl",
     name: "Tim Berners-Lee",
     text: "English computer scientist and inventor of the World Wide Web. Tim Berners-Lee's pioneering work has revolutionized the way information is accessed and shared on the internet.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 79,
+    numsRetweets: 48,
+    numsLikes: '5,254',
+    numsViews: '90.3k'
   },
   {
     id: 5,
     username: "dhh",
     name: "David Heinemeier Hansson",
     text: "Danish-American software developer and entrepreneur best known as the creator of the Ruby on Rails web application framework. David Heinemeier Hansson has played a key role in the development of web technologies.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 85,
+    numsRetweets: 57,
+    numsLikes: '5,673',
+    numsViews: '89.8k'
   },
   {
     id: 6,
     username: "martinfowler",
     name: "Martin Fowler",
     text: "British software developer and author known for his expertise in software architecture and design patterns. Martin Fowler has written influential books and articles on software development.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 68,
+    numsRetweets: 53,
+    numsLikes: '5,012',
+    numsViews: '93.5k'
   },
   {
     id: 7,
     username: "ry",
     name: "Ryan Dahl",
     text: "American software engineer and the creator of Node.js, a popular JavaScript runtime environment. Ryan Dahl's work has enabled server-side JavaScript development.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 73,
+    numsRetweets: 51,
+    numsLikes: '5,289',
+    numsViews: '94.6k'
   },
   {
     id: 8,
     username: "gaearon",
     name: "Dan Abramov",
     text: "Software engineer known for coauthoring Redux and contributing to the development of the React JavaScript library. Dan Abramov is a prominent figure in the React community.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 77,
+    numsRetweets: 56,
+    numsLikes: '5,487',
+    numsViews: '97.2k'
   },
   {
     id: 9,
     username: "yyx990803",
     name: "Evan You",
     text: "Chinese-Canadian software developer recognized as the creator of Vue.js, a popular JavaScript framework. Evan You has made significant contributions to front-end web development.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 81,
+    numsRetweets: 59,
+    numsLikes: '5,726',
+    numsViews: '98.7k'
   },
   {
     id: 10,
     username: "taylorotwell",
     name: "Taylor Otwell",
     text: "Canadian software developer known for creating the Laravel PHP framework. Taylor Otwell's work has simplified web application development in the PHP community.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 10,
+    numsRetweets: 43,
+    numsLikes: 932,
+    numsViews: '3,213',
   },
   {
     id: 11,
     username: "clattner",
     name: "Chris Lattner",
     text: "American computer scientist and software engineer who created the Swift programming language, which is used for iOS, macOS, watchOS, and tvOS app development. Chris Lattner's work has greatly influenced the Apple developer ecosystem.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 74,
+    numsRetweets: 50,
+    numsLikes: '5,155',
+    numsViews: '96.8k'
   },
   {
     id: 12,
     username: "matz",
     name: "Yukihiro Matsumoto",
     text: "Japanese computer scientist and software developer best known as the creator of the Ruby programming language. Yukihiro Matsumoto's work has had a significant impact on the Ruby community.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 64,
+    numsRetweets: 45,
+    numsLikes: '4,523',
+    numsViews: '88.9k'
   },
   {
     id: 13,
     username: "midudev",
     name: "Miguel Ángel Durán",
     text: "Spanish content creator, developer, and educator known for his presence on Twitch and contributions to the developer community. Miguel Ángel Durán shares valuable insights on programming and technology.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 70,
+    numsRetweets: 53,
+    numsLikes: '4,782',
+    numsViews: '90.6k'
   },
   {
     id: 14,
     username: "fabpot",
     name: "Fabien Potencier",
     text: "French software developer and entrepreneur who founded Symfony, a popular PHP web application framework. Fabien Potencier has played a key role in the PHP development ecosystem.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 76,
+    numsRetweets: 48,
+    numsLikes: '5,013',
+    numsViews: '93.2k'
   },
   {
     id: 15,
     username: "dgageot",
     name: "David Gageot",
     text: "French software developer and active contributor to various open-source projects. David Gageot's work has advanced software development practices and collaboration within the community.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 83,
+    numsRetweets: 59,
+    numsLikes: '5,467',
+    numsViews: '97.5k'
   },
   {
     id: 16,
     username: "jeresig",
     name: "John Resig",
     text: "American software developer best known as the creator of the jQuery JavaScript library, a widely used tool for simplifying web development. John Resig has made web development more accessible to many developers.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 16,
+    numsRetweets: 160,
+    numsLikes: 1600,
+    numsViews: 16000,
   },
   {
     id: 17,
     username: "defunkt",
     name: "Chris Wanstrath",
     text: "American software developer and entrepreneur who co-founded GitHub, a leading platform for version control and collaborative software development. Chris Wanstrath has had a profound impact on the way developers collaborate on code.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 65,
+    numsRetweets: 47,
+    numsLikes: '4,628',
+    numsViews: '89.4k'
   },
   {
     id: 18,
     username: "mojombo",
     name: "Tom Preston-Werner",
     text: "American software developer and entrepreneur who co-founded GitHub, a platform that has revolutionized the way software projects are managed and collaborated on. Tom Preston-Werner's contributions have shaped modern software development practices.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 72,
+    numsRetweets: 56,
+    numsLikes: '4,956',
+    numsViews: '92.7k'
   },
   {
     id: 19,
     username: "mxcl",
     name: "Max Howell",
     text: "Software developer known for creating Homebrew, a popular package manager for macOS. Max Howell's work has simplified software installation and management for macOS users.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 69,
+    numsRetweets: 52,
+    numsLikes: '4,813',
+    numsViews: '91.3k'
   },
   {
     id: 20,
     username: "kentcdodds",
     name: "Kent C. Dodds",
     text: "American author and speaker specializing in React and JavaScript development. Kent C. Dodds is a well-known figure in the React community, providing valuable educational content and insights.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 78,
+    numsRetweets: 58,
+    numsLikes: '5,245',
+    numsViews: '94.1k'
+  },
+  {
+    id: 16,
+    username: "jeresig",
+    name: "John Resig",
+    text: "American software developer best known as the creator of the jQuery JavaScript library, a widely used tool for simplifying web development. John Resig has made web development more accessible to many developers.",
+    isVerified: true,
+    numsComments: 84,
+    numsRetweets: 61,
+    numsLikes: '5,632',
+    numsViews: '98.1k'
+  },
+  {
+    id: 17,
+    username: "defunkt",
+    name: "Chris Wanstrath",
+    text: "American software developer and entrepreneur who co-founded GitHub, a leading platform for version control and collaborative software development. Chris Wanstrath has had a profound impact on the way developers collaborate on code.",
+    isVerified: true,
+    numsComments: 72,
+    numsRetweets: 52,
+    numsLikes: '4,814',
+    numsViews: '90.9k'
+  },
+  {
+    id: 18,
+    username: "mojombo",
+    name: "Tom Preston-Werner",
+    text: "American software developer and entrepreneur who co-founded GitHub, a platform that has revolutionized the way software projects are managed and collaborated on. Tom Preston-Werner's contributions have shaped modern software development practices.",
+    isVerified: true,
+    numsComments: 70,
+    numsRetweets: 49,
+    numsLikes: '4,953',
+    numsViews: '91.5k'
+  },
+  {
+    id: 19,
+    username: "mxcl",
+    name: "Max Howell",
+    text: "Software developer known for creating Homebrew, a popular package manager for macOS. Max Howell's work has simplified software installation and management for macOS users.",
+    isVerified: false,
+    numsComments: 74,
+    numsRetweets: 53,
+    numsLikes: '4,983',
+    numsViews: '92.1k'
+  },
+  {
+    id: 20,
+    username: "kentcdodds",
+    name: "Kent C. Dodds",
+    text: "American author and speaker specializing in React and JavaScript development. Kent C. Dodds is a well-known figure in the React community, providing valuable educational content and insights.",
+    isVerified: true,
+    numsComments: 66,
+    numsRetweets: 47,
+    numsLikes: '4,729',
+    numsViews: '88.3k'
   },
   {
     id: 21,
     username: "sdras",
     name: "Sarah Drasner",
     text: "Canadian developer and advocate for modern web technologies. Sarah Drasner actively promotes web development best practices and contributes to the advancement of web technology.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 71,
+    numsRetweets: 51,
+    numsLikes: '4,892',
+    numsViews: '90.2k'
   },
   {
     id: 22,
     username: "rauchg",
     name: "Guillermo Rauch",
     text: "Argentinian software developer and the creator of Socket.io and Now.sh. Guillermo Rauch's work has enabled real-time communication in web applications and simplified server deployment.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 63,
+    numsRetweets: 44,
+    numsLikes: '4,457',
+    numsViews: '87.6k'
   },
   {
     id: 23,
     username: "b0rk",
     name: "Julia Evans",
     text: "Canadian author and creator of educational tech resources, including comics and tutorials on various technical topics. Julia Evans is known for making complex technical concepts accessible and engaging.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 75,
+    numsRetweets: 49,
+    numsLikes: '5,095',
+    numsViews: '96.4k'
   },
   {
     id: 24,
     username: "addyosmani",
     name: "Addy Osmani",
     text: "British software engineer working at Google, with a focus on web performance and developer tooling. Addy Osmani has contributed to tools and practices that improve web performance.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 62,
+    numsRetweets: 43,
+    numsLikes: '4,267',
+    numsViews: '87.1k'
   },
   {
     id: 25,
     username: "substack",
     name: "James Halliday",
     text: "American software developer known by the pseudonym 'Substack.' He has created many popular Node.js modules and is recognized for his contributions to the Node.js ecosystem.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 71,
+    numsRetweets: 54,
+    numsLikes: '4,932',
+    numsViews: '92.4k'
   },
   {
     id: 26,
     username: "paulirish",
     name: "Paul Irish",
     text: "American software engineer working at Google, advocating for modern web development practices and tools. Paul Irish's work has helped developers improve the performance and user experience of web applications.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 69,
+    numsRetweets: 47,
+    numsLikes: '4,755',
+    numsViews: '88.6k'
   },
   {
     id: 27,
     username: "mxstbr",
     name: "Max Stoiber",
     text: "Passionate software developer with a focus on React. Max Stoiber has created and contributed to various React-related projects and is an active member of the React community.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 78,
+    numsRetweets: 51,
+    numsLikes: '5,023',
+    numsViews: '90.8k'
   },
   {
     id: 28,
     username: "daneden",
     name: "Daniel Eden",
     text: "UI designer and developer known for his work on various design systems and UI components. Daniel Eden's contributions have enhanced the user interfaces of numerous applications.",
-    isVerified: true
+    isVerified: true,
+    numsComments: 63,
+    numsRetweets: 46,
+    numsLikes: '4,698',
+    numsViews: '95.2k'
   },
   {
     id: 29,
     username: "muan",
     name: "Mu-An Chiou",
     text: "Product designer and web developer known for her creative work in designing user interfaces and web experiences. Mu-An Chiou's designs have enriched the user experiences of many digital products.",
-    isVerified: true
+    numsComments: 71,
+    numsRetweets: 54,
+    numsLikes: '4,963',
+    numsViews: '91.2k'
   },
   {
     id: 30,
     username: "tenderlove",
     name: "Aaron Patterson",
     text: "Member of the Ruby on Rails Core Team and a prolific Ruby developer. Aaron Patterson's contributions have improved the Ruby programming language and the Ruby on Rails framework.",
-    isVerified: false
+    isVerified: false,
+    numsComments: 68,
+    numsRetweets: 49,
+    numsLikes: '4,725',
+    numsViews: '96.3k'
   },
   {
     id: 31,
     username: "tj",
     name: "TJ Holowaychuk",
     text: "Software developer known for creating Express.js, a widely used Node.js web application framework, and many other open-source tools. TJ Holowaychuk has had a significant impact on the Node.js ecosystem.",
-    isVerified: true
+    numsComments: 75,
+    numsRetweets: 52,
+    numsLikes: '4,641',
+    numsViews: '89.9k'
   },
   {
     id: 1001,
@@ -222,7 +399,11 @@ export const homePosts = [
     username: "LuisMtz19",
     text: "Enjoying a beautiful sunny day at the beach. 🏖️☀️ #Summer #Relax",
     isVerified: false,
-    mediaPost: "https://upload.wikimedia.org/wikipedia/commons/9/96/Barbados_beach.jpg"
+    mediaPost: "https://upload.wikimedia.org/wikipedia/commons/9/96/Barbados_beach.jpg",
+    numsComments: 79,
+    numsRetweets: 48,
+    numsLikes: '4,996',
+    numsViews: '94.5k'
   },
   {
     id: 1002,
@@ -230,7 +411,11 @@ export const homePosts = [
     username: "IsaGlez",
     text: "Just finished an exciting book I couldn't put down. 📚❤️ #Reading #Bookworm",
     isVerified: true,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 9,
+    numsRetweets: 23,
+    numsLikes: 372,
+    numsViews: '8,887'
   },
   {
     id: 1003,
@@ -238,7 +423,11 @@ export const homePosts = [
     username: "CRodriguez22",
     text: "Watching the latest sci-fi movie. The visual effects are mind-blowing! 🎬🚀 #Movies #SciFi",
     isVerified: false,
-    mediaPost: "https://caracol.com.co/resizer/7O7Xr90AnwdIxe-jCzU7oKvoe5c=/650x488/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/4BKMUGUF5JBZXH4K6B3RKGT34Y.jpg"
+    mediaPost: "https://caracol.com.co/resizer/7O7Xr90AnwdIxe-jCzU7oKvoe5c=/650x488/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/4BKMUGUF5JBZXH4K6B3RKGT34Y.jpg",
+    numsComments: 10,
+    numsRetweets: 16,
+    numsLikes: 405,
+    numsViews: '8,543'
   },
   {
     id: 1004,
@@ -246,7 +435,11 @@ export const homePosts = [
     username: "MariaPerez7",
     text: "Getting an early morning workout in to stay fit. 💪🏋️‍♀️ #Fitness #Exercise",
     isVerified: true,
-    mediaPost: "https://web-back.perfectgym.com/sites/default/files/styles/460x/public/equipment%20%286%29.jpg?itok=bC0T32-K"
+    mediaPost: "https://web-back.perfectgym.com/sites/default/files/styles/460x/public/equipment%20%286%29.jpg?itok=bC0T32-K",
+    numsComments: 8,
+    numsRetweets: 20,
+    numsLikes: 398,
+    numsViews: '9,123'
   },
   {
     id: 1005,
@@ -254,7 +447,11 @@ export const homePosts = [
     username: "DavSanchez",
     text: "Happy birthday to my best friend! 🎉🎂 Wishing you a day full of joy and surprises! #Birthday #Friendship",
     isVerified: false,
-    mediaPost: "https://hips.hearstapps.com/hmg-prod/images/50th-birthday-party-ideas-649b6a8820c36.jpg?crop=0.671xw:1.00xh;0.226xw,0&resize=1200:*"
+    mediaPost: "https://hips.hearstapps.com/hmg-prod/images/50th-birthday-party-ideas-649b6a8820c36.jpg?crop=0.671xw:1.00xh;0.226xw,0&resize=1200:*",
+    numsComments: 6,
+    numsRetweets: 24,
+    numsLikes: 365,
+    numsViews: '8,612'
   },
   {
     id: 1006,
@@ -262,7 +459,11 @@ export const homePosts = [
     username: "LauraR24",
     text: "Preparing a delicious dinner for the family tonight. 🍽️👩‍🍳 #Cooking #Family",
     isVerified: true,
-    mediaPost: "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/06/30/16881246596064.jpg"
+    mediaPost: "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/06/30/16881246596064.jpg",
+    numsComments: 93,
+    numsRetweets: 29,
+    numsLikes: '4,267',
+    numsViews: '110.2k'
   },
   {
     id: 1007,
@@ -270,7 +471,11 @@ export const homePosts = [
     username: "JaviLopez",
     text: "Heading to my favorite band's concert. I'm so excited! 🎶🤘 #Music #Concert",
     isVerified: false,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 42,
+    numsRetweets: 78,
+    numsLikes: '2,890',
+    numsViews: '45.6k'
   },
   {
     id: 1008,
@@ -278,7 +483,11 @@ export const homePosts = [
     username: "ElenaFdez",
     text: "Just returned from an incredible vacation. The trip of a lifetime! ✈️🌴 #Travel #Adventure",
     isVerified: true,
-    mediaPost: "https://a.cdn-hotels.com/gdcs/production33/d204/a6500e11-da16-4dcc-9973-63a2841ef851.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+    mediaPost: "https://a.cdn-hotels.com/gdcs/production33/d204/a6500e11-da16-4dcc-9973-63a2841ef851.jpg?impolicy=fcrop&w=800&h=533&q=medium",
+    numsComments: 12,
+    numsRetweets: 18,
+    numsLikes: 425,
+    numsViews: '8,998'
   },
   {
     id: 1009,
@@ -286,7 +495,11 @@ export const homePosts = [
     username: "PedroR10",
     text: "Spending the afternoon with my dog at the park. 🐶🌳 #Pets #Nature",
     isVerified: false,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 12,
+    numsRetweets: 8,
+    numsLikes: 564,
+    numsViews: '6,543'
   },
   {
     id: 1010,
@@ -294,7 +507,11 @@ export const homePosts = [
     username: "SofiaT",
     text: "Learning to code in JavaScript. It's an exciting challenge! 💻🚀 #Programming #WebDevelopment",
     isVerified: true,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 31,
+    numsRetweets: 65,
+    numsLikes: '2,746',
+    numsViews: '76.1k'
   },
   {
     id: 1011,
@@ -302,7 +519,11 @@ export const homePosts = [
     username: "HectorM",
     text: "Watching the soccer match with friends. Go team! ⚽🥅 #Soccer #Friends",
     isVerified: false,
-    mediaPost: "https://static.vecteezy.com/system/resources/previews/004/270/541/large_2x/a-group-of-friends-in-casual-outfit-play-soccer-in-the-open-air-people-have-fun-and-have-fun-active-rest-and-scenic-sunset-photo.jpg"
+    mediaPost: "https://static.vecteezy.com/system/resources/previews/004/270/541/large_2x/a-group-of-friends-in-casual-outfit-play-soccer-in-the-open-air-people-have-fun-and-have-fun-active-rest-and-scenic-sunset-photo.jpg",
+    numsComments: 6,
+    numsRetweets: 18,
+    numsLikes: 412,
+    numsViews: '5,432'
   },
   {
     id: 1012,
@@ -310,7 +531,11 @@ export const homePosts = [
     username: "PaulaG",
     text: "Celebrating my graduation today. I've achieved my goal! 🎓🥳 #Graduation #Success",
     isVerified: true,
-    mediaPost: "https://evess.co/cdn/shop/files/banner-2.jpg?v=1684854033"
+    mediaPost: "https://evess.co/cdn/shop/files/banner-2.jpg?v=1684854033",
+    numsComments: 76,
+    numsRetweets: 50,
+    numsLikes: '4,815',
+    numsViews: '93.7k'
   },
   {
     id: 1013,
@@ -318,7 +543,11 @@ export const homePosts = [
     username: "FernandoV",
     text: "Enjoying a picnic in the park with my family. 🧺👨‍👩‍👧‍👦 #Family #Fun",
     isVerified: false,
-    mediaPost: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Family_Portrait.jpg/1200px-Family_Portrait.jpg"
+    mediaPost: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Family_Portrait.jpg/1200px-Family_Portrait.jpg",
+    numsComments: 8,
+    numsRetweets: 14,
+    numsLikes: 376,
+    numsViews: '9,876'
   },
   {
     id: 1014,
@@ -326,7 +555,11 @@ export const homePosts = [
     username: "CarmenM",
     text: "Working on my new art project. I hope you'll like it when it's finished! 🎨🖌️ #Art #Creativity",
     isVerified: true,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 7,
+    numsRetweets: 22,
+    numsLikes: 389,
+    numsViews: '8,765'
   },
   {
     id: 1015,
@@ -334,7 +567,11 @@ export const homePosts = [
     username: "AntonioR",
     text: "Excited to announce that I'll be a dad soon. The excitement is indescribable! 👶🍼 #FutureDad #BabyOnTheWay",
     isVerified: false,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 9,
+    numsRetweets: 15,
+    numsLikes: 432,
+    numsViews: '9,214',
   },
   {
     id: 1016,
@@ -342,7 +579,11 @@ export const homePosts = [
     username: "EvaSoto",
     text: "Celebrating our wedding anniversary with a romantic dinner. I love you, darling. ❤️🍷 #Anniversary #Love",
     isVerified: true,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 67,
+    numsRetweets: 54,
+    numsLikes: '3,540',
+    numsViews: '89.3k',
   },
   {
     id: 1017,
@@ -350,7 +591,11 @@ export const homePosts = [
     username: "MiguelO",
     text: "Starting my weight loss journey. Day 1 of a new life! 💪🥗 #Health #Transformation",
     isVerified: false,
-    mediaPost: "https://i.pinimg.com/736x/7b/74/5a/7b745a42fc9fc0d90596787d5bac5fbd.jpg"
+    mediaPost: "https://i.pinimg.com/736x/7b/74/5a/7b745a42fc9fc0d90596787d5bac5fbd.jpg",
+    numsComments: 43,
+    numsRetweets: 21,
+    numsLikes: 357,
+    numsViews: '45.1k',
   },
   {
     id: 1018,
@@ -358,7 +603,11 @@ export const homePosts = [
     username: "MarinaR",
     text: "Enjoying a day of spa and relaxation. I deserve it! 💆‍♀️🌸 #Relaxation #Wellness",
     isVerified: true,
-    mediaPost: ""
+    mediaPost: "",
+    numsComments: 23,
+    numsRetweets: 35,
+    numsLikes: 983,
+    numsViews: '21.7k',
   },
   {
     id: 1019,
@@ -366,8 +615,10 @@ export const homePosts = [
     username: "rmsanchez93",
     text: "Cheering on my chess team in the tournament. Let's go for the win! ♟️🏆 #Chess #Strategy",
     isVerified: false,
-    mediaPost: "https://assetsio.reedpopcdn.com/chess-playing-hand.jpeg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+    mediaPost: "https://assetsio.reedpopcdn.com/chess-playing-hand.jpeg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
+    numsComments: 19,
+    numsRetweets: 32,
+    numsLikes: '1,232',
+    numsViews: '32.1k',
   }
 ];
-  
-  

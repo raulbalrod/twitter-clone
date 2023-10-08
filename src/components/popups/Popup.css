@@ -1,0 +1,226 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 43px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #15202b;
+    border-radius: 20px;
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup-inner .done-btn:hover {
+    background-color: rgba(29, 156, 240, 0.9);
+}
+
+
+
+.function-no-avaible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.function-no-avaible h3 {
+    width: 70%;
+    text-align: center;
+    color: #dedede9f;
+}
+
+.function-no-avaible img {
+    border-radius: 20px;
+}
+
+
+.div-premium-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div-premium-popup h1 {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.div-premium-popup .type-of-subscriptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    gap: 50px;
+}
+
+.div-premium-popup .type-of-subscriptions div span {
+    font-size: 14px;
+    color: #dedede9f;
+}
+
+.div-premium-popup .type-of-subscriptions div h3 {
+    margin: 0;
+}
+
+.div-premium-popup .type-of-subscription {
+    padding: 15px;
+    border: 2px solid #00000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.div-premium-popup .type-of-subscription--active {
+    border: 2px solid #1d9bf0;
+}
+
+.div-premium-popup .type-of-subscription:hover {
+    background-color: rgba(41, 61, 80, 0.444);
+}
+
+.div-premium-popup .subscibe-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    width: 60%;
+    height: 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.div-premium-popup p {
+    font-size: 15px;
+}
+
+.div-premium-popup p span {
+    color: #1d9bf0;
+    cursor: pointer;
+}
+
+.div-premium-popup p span:hover {
+    text-decoration: underline;
+}
+
+
+
+.change-styles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.change-styles h1 {
+    margin: 2px;
+}
+
+.change-styles .customize-span {
+    color: #dedede9f;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.change-styles .settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.change-styles span {
+    color: #dedede9f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.change-styles .styles-section  {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.change-styles .styles-section div {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: 2px solid #1d9bf0; 
+}
+
+
+.change-styles .styles-section .dim {
+    background-color: #15202b;
+    color: #fff;
+}
+
+.color-section .blue {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1d9bf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.fake-post {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #dedede65;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 15px;
+}
+
+.fake-post .fake-post-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.fake-post .fake-post-data .post-username-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.fake-post p {
+    padding-left: 55px;
+    margin: 0;
+}
+
+.fake-post .verified {
+    color: #1d9bf0;
+    font-size: 18px;
+}

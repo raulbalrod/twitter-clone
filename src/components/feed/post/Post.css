@@ -52,8 +52,13 @@
   width: 95%;
 }
 
-.post ul li {
+.post ul li, .reply ul li {
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
 }
 
 .post ul li:nth-child(1):hover, .post ul li:nth-child(4):hover {

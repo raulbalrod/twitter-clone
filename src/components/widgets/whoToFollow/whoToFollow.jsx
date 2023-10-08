@@ -16,10 +16,7 @@ export const WhoToFollows = ({ name, userName, isVerified }) => {
 
       <div className='follow-username-data'>
         <div>
-          <Link
-            to={`/${userName}`}
-            style={{ textDecoration: 'none', color: ' #fff' }}
-          >
+          <Link to={`/${userName}`} style={{ textDecoration: 'none' }}>
             <b>{name}</b>
           </Link>
           <Verified

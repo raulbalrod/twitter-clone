@@ -1,7 +1,6 @@
 import { Verified } from '@mui/icons-material';
 
 import './Post.css';
-import { IteractionPost } from '../../iteractionPost';
 import { Link } from 'react-router-dom';
 
 export const PostTwitter = ({
@@ -15,6 +14,10 @@ export const PostTwitter = ({
   RepeatIcon,
   LikeIcon,
   ViewsIcon,
+  numsComments,
+  numsRetweets,
+  numsLikes,
+  numsViews,
 }) => {
   return (
     <div className='post'>
@@ -57,12 +60,20 @@ export const PostTwitter = ({
         </div>
       </div>
 
-      <IteractionPost
-        CommentIcon={CommentIcon}
-        RepeatIcon={RepeatIcon}
-        LikeIcon={LikeIcon}
-        ViewsIcon={ViewsIcon}
-      />
+      <ul>
+        <li>
+          <CommentIcon /> {numsComments}
+        </li>
+        <li>
+          <RepeatIcon /> {numsRetweets}
+        </li>
+        <li>
+          <LikeIcon /> {numsLikes}
+        </li>
+        <li>
+          <ViewsIcon /> {numsViews}
+        </li>
+      </ul>
     </div>
   );
 };

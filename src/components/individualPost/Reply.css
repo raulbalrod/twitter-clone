@@ -40,10 +40,6 @@
   text-decoration: underline;
   cursor: pointer;
 }
-
-.reply ul li {
-    padding: 5px;
-}
   
 .reply ul li:nth-child(1):hover, .reply ul li:nth-child(4):hover {
     cursor: pointer;

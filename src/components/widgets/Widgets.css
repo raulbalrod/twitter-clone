@@ -57,6 +57,10 @@
    
 }
 
+.follow-username-data b {
+    color: #fff;
+}
+
 .user-to-follow .who-to-follow {
     display: flex;
     justify-content: space-between;
@@ -132,6 +136,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: #fff;
     background-color: #1e2732;
     border-radius: 20px;
 } 

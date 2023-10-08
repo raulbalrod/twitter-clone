@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import './PostPage.css';
 
@@ -58,6 +58,10 @@ export const IndividualPostPage = () => {
                 LikeIcon={FavoriteBorderIcon}
                 CommentIcon={ChatBubbleOutlineIcon}
                 ViewsIcon={EqualizerIcon}
+                numsComments={reply.numsComments}
+                numsRetweets={reply.numsRetweets}
+                numsLikes={reply.numsLikes}
+                numsViews={reply.numsViews}
                 key={reply.id}
               />
             ))}

@@ -43,6 +43,10 @@ export const FeedTwitter = () => {
                 LikeIcon={FavoriteBorderIcon}
                 CommentIcon={ChatBubbleOutlineIcon}
                 ViewsIcon={EqualizerIcon}
+                numsComments={post.numsComments}
+                numsRetweets={post.numsRetweets}
+                numsLikes={post.numsLikes}
+                numsViews={post.numsViews}
                 key={post.id}
               />
             </Link>
