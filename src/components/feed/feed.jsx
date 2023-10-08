@@ -24,26 +24,29 @@ export const FeedTwitter = () => {
       </div>
 
       <div className='posts'>
-        {homePosts.reverse().map((post) => (
-          <Link
-            to={`/${post.username}/status/${post.id}`}
-            style={{ textDecoration: 'none' }}
-          >
-            <PostTwitter
-              userName={post.username}
-              name={post.name}
-              text={post.text}
-              isVerified={post.isVerified}
-              mediaPost={post.mediaPost}
-              Verified={VerifiedIcon}
-              RepeatIcon={RepeatIcon}
-              LikeIcon={FavoriteBorderIcon}
-              CommentIcon={ChatBubbleOutlineIcon}
-              ViewsIcon={EqualizerIcon}
-              key={post.id}
-            />
-          </Link>
-        ))}
+        {homePosts
+          .filter((post) => post.id > 31)
+          .reverse()
+          .map((post) => (
+            <Link
+              to={`/${post.username}/status/${post.id}`}
+              style={{ textDecoration: 'none' }}
+            >
+              <PostTwitter
+                userName={post.username}
+                name={post.name}
+                text={post.text}
+                isVerified={post.isVerified}
+                mediaPost={post.mediaPost}
+                Verified={VerifiedIcon}
+                RepeatIcon={RepeatIcon}
+                LikeIcon={FavoriteBorderIcon}
+                CommentIcon={ChatBubbleOutlineIcon}
+                ViewsIcon={EqualizerIcon}
+                key={post.id}
+              />
+            </Link>
+          ))}
       </div>
     </div>
   );

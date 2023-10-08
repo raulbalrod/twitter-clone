@@ -30,7 +30,7 @@ export const newUsers = [
   {
     id: 5,
     username: "dhh",
-    name: "David Heinemeier Hansson",
+    name: "David HH",
     description: "Danish-American software developer and entrepreneur best known as the creator of the Ruby on Rails web application framework. David Heinemeier Hansson has played a key role in the development of web technologies.",
     isVerified: true
   },
@@ -79,14 +79,14 @@ export const newUsers = [
   {
     id: 12,
     username: "matz",
-    name: "Yukihiro Matsumoto",
+    name: "Yukihiro",
     description: "Japanese computer scientist and software developer best known as the creator of the Ruby programming language. Yukihiro Matsumoto's work has had a significant impact on the Ruby community.",
     isVerified: true
   },
   {
     id: 13,
     username: "midudev",
-    name: "Miguel Ángel Durán",
+    name: "Miguel Ángel",
     description: "Spanish content creator, developer, and educator known for his presence on Twitch and contributions to the developer community. Miguel Ángel Durán shares valuable insights on programming and technology.",
     isVerified: true
   },
@@ -121,7 +121,7 @@ export const newUsers = [
   {
     id: 18,
     username: "mojombo",
-    name: "Tom Preston-Werner",
+    name: "Tom",
     description: "American software developer and entrepreneur who co-founded GitHub, a platform that has revolutionized the way software projects are managed and collaborated on. Tom Preston-Werner's contributions have shaped modern software development practices.",
     isVerified: true
   },
@@ -135,7 +135,7 @@ export const newUsers = [
   {
     id: 20,
     username: "kentcdodds",
-    name: "Kent C. Dodds",
+    name: "Kent C.",
     description: "American author and speaker specializing in React and JavaScript development. Kent C. Dodds is a well-known figure in the React community, providing valuable educational content and insights.",
     isVerified: true
   },
@@ -149,7 +149,7 @@ export const newUsers = [
   {
     id: 22,
     username: "rauchg",
-    name: "Guillermo Rauch",
+    name: "Guillermo",
     description: "Argentinian software developer and the creator of Socket.io and Now.sh. Guillermo Rauch's work has enabled real-time communication in web applications and simplified server deployment.",
     isVerified: true
   },

@@ -5,6 +5,7 @@ import { HomePage } from './pages/home';
 import { IndividualPostPage } from './pages/postPage';
 import { ConnectPeople } from './pages/connectPeople';
 import { TrendsPage } from './pages/trends';
+import { ProfilePage } from './pages/profile';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           path='/:usernamePost/status/:id'
           element={<IndividualPostPage />}
         />
+        <Route path='/:usernamePost' element={<ProfilePage />} />
         <Route path='/connect_people' element={<ConnectPeople />} />
         <Route path='/trends' element={<TrendsPage />} />
       </Routes>

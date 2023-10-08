@@ -12,14 +12,12 @@ import { SideBar } from '../components/menu/sideBar';
 import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
 import { IndividualPost } from '../components/individualPost/individualPost';
-import { NewPostTwitter } from '../components/feed/postNewTwitte';
 import { ReplyPost } from '../components/feed/replyPost';
 import { replys } from '../data/posts/replys';
 import { Replys } from '../components/individualPost/replys';
 
 export const IndividualPostPage = () => {
   const { usernamePost } = useParams();
-
   const post = getPostDestails(usernamePost);
 
   const randomNum = Math.floor(Math.random() * 10);
@@ -51,7 +49,7 @@ export const IndividualPostPage = () => {
           <div className='replys'>
             {replys.slice(0, randomNum).map((reply) => (
               <Replys
-                userName={reply.username}
+                userNameReply={reply.username}
                 name={reply.name}
                 text={reply.text}
                 isVerified={reply.isVerified}

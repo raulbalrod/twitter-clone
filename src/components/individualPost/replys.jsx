@@ -2,9 +2,10 @@ import { Verified } from '@mui/icons-material';
 
 import './Reply.css';
 import { IteractionPost } from '../iteractionPost';
+import { Link } from 'react-router-dom';
 
 export const Replys = ({
-  userName,
+  userNameReply,
   name,
   isVerified,
   timePosted,
@@ -17,23 +18,36 @@ export const Replys = ({
   return (
     <div className='reply'>
       <div className='reply-content'>
-        <img
-          src={`https://unavatar.io/${userName}`}
-          alt='avatar-profile-img'
-          className='avatar-profile-img'
-          width='50px'
-          height='50px'
-        />
+        <Link to={`/${userNameReply}`} style={{ textDecoration: 'none' }}>
+          <img
+            src={`https://unavatar.io/${userNameReply}`}
+            alt='avatar-profile-img'
+            className='avatar-profile-img'
+            width='50px'
+            height='50px'
+          />
+        </Link>
         <div className='reply-details'>
           <div className='reply-username-data'>
-            <b>{name}</b>{' '}
+            <Link
+              to={`/${userNameReply}`}
+              style={{ textDecoration: 'none', color: ' #fff' }}
+            >
+              <b>{name}</b>
+            </Link>
             <Verified
               className={`verified-profile ${
                 isVerified ? 'verified' : 'not-verified'
               }`}
             />
             <span>
-              @{userName} · {timePosted}
+              <Link
+                to={`/${userNameReply}`}
+                style={{ textDecoration: 'none', color: ' #dedede9f' }}
+              >
+                @{userNameReply}
+              </Link>{' '}
+              · {timePosted}
             </span>
           </div>
           <p>{text}</p>

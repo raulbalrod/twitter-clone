@@ -1,5 +1,6 @@
 import { Verified } from '@mui/icons-material';
 import { IteractionPost } from '../iteractionPost';
+import { Link } from 'react-router-dom';
 
 export const IndividualPost = ({
   userName,
@@ -17,25 +18,37 @@ export const IndividualPost = ({
   return (
     <div className='individual-post'>
       <div className='individual-post-content'>
-        <img
-          src={`https://unavatar.io/${userName}`}
-          alt='avatar-profile-img'
-          className='avatar-profile-img'
-          width='50px'
-          height='50px'
-        />
+        <Link to={`/${userName}`} style={{ textDecoration: 'none' }}>
+          <img
+            src={`https://unavatar.io/${userName}`}
+            alt='avatar-profile-img'
+            className='avatar-profile-img'
+            width='50px'
+            height='50px'
+          />
+        </Link>
 
         <div className='individual-post-details'>
           <div className='individual-post-username-data'>
             <div>
-              <b>{name}</b>
+              <Link
+                to={`/${userName}`}
+                style={{ textDecoration: 'none', color: '#fff' }}
+              >
+                <b>{name}</b>
+              </Link>
               <Verified
                 className={`verified-profile ${
                   isVerified ? 'verified' : 'not-verified'
                 }`}
               />
             </div>
-            <span>@{userName}</span>
+            <Link
+              to={`/${userName}`}
+              style={{ textDecoration: 'none', color: ' #dedede9f' }}
+            >
+              <span>@{userName}</span>
+            </Link>
           </div>
         </div>
       </div>

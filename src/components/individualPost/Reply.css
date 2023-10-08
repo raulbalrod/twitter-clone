@@ -21,6 +21,7 @@
     
 .reply .avatar-profile-img {
     border-radius: 50%;
+    cursor: pointer;
 }
     
 .reply .reply-details .reply-username-data {
@@ -32,42 +33,43 @@
     
 .reply .reply-details .reply-username-data span {
     color: #dedede9f;
+    cursor: pointer;
+}
+
+.reply .reply-details .reply-username-data b:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reply ul li {
+    padding: 5px;
 }
   
-  .reply .reply-details .reply-img {
-    border-radius: 25px;
-    width: 95%;
-  }
-  
-  .reply ul li {
-    padding: 5px;
-  }
-  
-  .reply ul li:nth-child(1):hover, .reply ul li:nth-child(4):hover {
+.reply ul li:nth-child(1):hover, .reply ul li:nth-child(4):hover {
     cursor: pointer;
     color: #1d9bf0;
     background-color: rgba(29, 156, 240, 0.2);
     border-radius: 50%;
-  }
+}
   
-  .reply ul li:nth-child(3):hover {
+.reply ul li:nth-child(3):hover {
     cursor: pointer;
     color: #df245d;
     background-color: rgba(223, 36, 92, 0.2);
     border-radius: 50%;
-  }
-  .reply ul li:nth-child(2):hover {
+}
+.reply ul li:nth-child(2):hover {
     cursor: pointer;
     color: #19cf86;
     background-color: rgba(25, 207, 134, 0.2);
     border-radius: 50%;
-  }
+}
   
-  .reply .verified {
+.reply .verified {
     color: #1d9bf0;
     font-size: 18px;
-  }
+}
   
-  .reply .not-verified {
+.reply .not-verified {
     display: none;
-  }
+}
