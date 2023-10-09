@@ -20,11 +20,14 @@ export const FeedTwitter = () => {
     const newPost = {
       text: text,
       id: Date.now(),
+      name: 'Raul Balrod',
+      username: 'raulbalrod',
     };
     setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
   };
 
   const combinedPosts = [...homePosts, ...newPosts];
+
   return (
     <div className='feed'>
       <div className='header-feed'>

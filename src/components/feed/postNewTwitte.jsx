@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 export const NewPostTwitter = ({ onPostText }) => {
   const [username, setUsername] = useState('raulbalrod');
-  const [name, setName] = useState('Raul BalRod');
   const [text, setText] = useState('');
 
   const handleTextChange = (event) => {

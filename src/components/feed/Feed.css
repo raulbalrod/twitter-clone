@@ -41,13 +41,13 @@
 
 .new-post div:nth-child(1) .textarea-new-post {
     width: 100%;
-    border: none;
     outline: none;
+    border: none;
+    resize: none;
     background: transparent;
     color: #fff;
     font-weight: 400;
     font-size: 1.3rem;
-    resize: none;
 }
 
 .feed-new-post-btn {
