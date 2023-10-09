@@ -10,21 +10,33 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 
 import { NewPostTwitter } from './postNewTwitte';
 import { homePosts } from '../../data/posts/homePosts';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const FeedTwitter = () => {
+  const [postText, setPostText] = useState('');
+  const [newPosts, setNewPosts] = useState([]);
+
+  const addNewPost = (text) => {
+    const newPost = {
+      text: text,
+      id: Date.now(),
+    };
+    setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
+  };
+
+  const combinedPosts = [...homePosts, ...newPosts];
   return (
     <div className='feed'>
       <div className='header-feed'>
         <h2>Home</h2>
 
         <div className='post-new-twitte'>
-          <NewPostTwitter />
+          <NewPostTwitter onPostText={addNewPost} />
         </div>
       </div>
 
       <div className='posts'>
-        {homePosts
+        {combinedPosts
           .filter((post) => post.id > 31)
           .reverse()
           .map((post) => (

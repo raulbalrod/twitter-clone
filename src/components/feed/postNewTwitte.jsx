@@ -1,13 +1,24 @@
-export const NewPostTwitter = () => {
-  const addPost = () => {
-    console.log('Adding post');
+import React, { useState } from 'react';
+
+export const NewPostTwitter = ({ onPostText }) => {
+  const [username, setUsername] = useState('raulbalrod');
+  const [name, setName] = useState('Raul BalRod');
+  const [text, setText] = useState('');
+
+  const handleTextChange = (event) => {
+    setText(event.target.value);
+  };
+
+  const handlePostClick = () => {
+    onPostText(text);
+    setText('');
   };
 
   return (
     <div className='new-post'>
       <div>
         <img
-          src='https://unavatar.io/raulbalrod'
+          src={`https://unavatar.io/${username}`}
           alt='img-profile'
           width='50px'
         />
@@ -15,13 +26,15 @@ export const NewPostTwitter = () => {
           name='post'
           className='textarea-new-post'
           placeholder='What is happening?!'
+          value={text}
+          onChange={handleTextChange}
         ></textarea>
       </div>
 
       <div>
         <input type='file' />
 
-        <button onClick={addPost()} className='feed-new-post-btn'>
+        <button onClick={handlePostClick} className='feed-new-post-btn'>
           Post
         </button>
       </div>

@@ -30,6 +30,17 @@ export const SideBar = () => {
   const [btnPopupChangeStyle, setBtnPopupChangeStyle] = useState(false);
   const [btnPopupNewPost, setBtnPopupNewPost] = useState(false);
 
+  const [postText, setPostText] = useState('');
+  const [newPosts, setNewPosts] = useState([]);
+
+  const addNewPost = (text) => {
+    const newPost = {
+      text: text,
+      id: Date.now(),
+    };
+    setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
+  };
+
   return (
     <div className='sideBar'>
       <Link to='/' style={{ textDecoration: 'none' }}>
@@ -102,7 +113,7 @@ export const SideBar = () => {
       </Popup>
 
       <PopupNewPosts trigger={btnPopupNewPost} setTrigger={setBtnPopupNewPost}>
-        <NewPostTwitter />
+        <NewPostTwitter onPostText={addNewPost} />
       </PopupNewPosts>
 
       <PopupPremium trigger={btnPopupPremium} setTrigger={setBtnPopupPremium}>
