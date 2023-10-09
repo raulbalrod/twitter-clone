@@ -28,28 +28,24 @@ export const FeedTwitter = () => {
           .filter((post) => post.id > 31)
           .reverse()
           .map((post) => (
-            <Link
-              to={`/${post.username}/status/${post.id}`}
-              style={{ textDecoration: 'none' }}
-            >
-              <PostTwitter
-                userName={post.username}
-                name={post.name}
-                text={post.text}
-                isVerified={post.isVerified}
-                mediaPost={post.mediaPost}
-                Verified={VerifiedIcon}
-                RepeatIcon={RepeatIcon}
-                LikeIcon={FavoriteBorderIcon}
-                CommentIcon={ChatBubbleOutlineIcon}
-                ViewsIcon={EqualizerIcon}
-                numsComments={post.numsComments}
-                numsRetweets={post.numsRetweets}
-                numsLikes={post.numsLikes}
-                numsViews={post.numsViews}
-                key={post.id}
-              />
-            </Link>
+            <PostTwitter
+              userName={post.username}
+              name={post.name}
+              text={post.text}
+              isVerified={post.isVerified}
+              mediaPost={post.mediaPost}
+              Verified={VerifiedIcon}
+              RepeatIcon={RepeatIcon}
+              LikeIcon={FavoriteBorderIcon}
+              CommentIcon={ChatBubbleOutlineIcon}
+              ViewsIcon={EqualizerIcon}
+              numsComments={post.numsComments}
+              numsRetweets={post.numsRetweets}
+              numsLikes={post.numsLikes}
+              numsViews={post.numsViews}
+              id={post.id}
+              key={post.id}
+            />
           ))}
       </div>
     </div>

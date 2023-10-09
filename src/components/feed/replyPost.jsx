@@ -1,4 +1,8 @@
 export const ReplyPost = () => {
+  const addReply = () => {
+    console.log('Adding post');
+  };
+
   return (
     <div className='new-post'>
       <div>
@@ -7,8 +11,14 @@ export const ReplyPost = () => {
           alt='img-profile'
           width='50px'
         />
-        <input type='text' placeholder='Post your reply' />
-        <button className='feed-new-post-btn'>Reply</button>
+        <textarea
+          name='post'
+          className='textarea-new-post'
+          placeholder='Post your reply'
+        ></textarea>
+        <button className='feed-new-post-btn' onClick={addReply()}>
+          Reply
+        </button>
       </div>
     </div>
   );

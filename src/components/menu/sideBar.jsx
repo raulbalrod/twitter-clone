@@ -21,11 +21,14 @@ import { PopupPremium } from '../popups/popupPremium';
 import { PPPremium } from '../popups/ppPremium';
 import { PopupChangeStyles } from '../popups/popupChangeStyle';
 import { PPStyles } from '../popups/ppStyles';
+import { PopupNewPosts } from '../popups/popupNewPost';
+import { NewPostTwitter } from '../feed/postNewTwitte';
 
 export const SideBar = () => {
   const [btnPopup, setBtnPopup] = useState(false);
   const [btnPopupPremium, setBtnPopupPremium] = useState(false);
   const [btnPopupChangeStyle, setBtnPopupChangeStyle] = useState(false);
+  const [btnPopupNewPost, setBtnPopupNewPost] = useState(false);
 
   return (
     <div className='sideBar'>
@@ -79,7 +82,9 @@ export const SideBar = () => {
         <SideBarOption Icon={MoreHorizIcon} textIcon='More' />
       </button>
 
-      <button className='sideBar-post'>Post</button>
+      <button className='sideBar-post' onClick={() => setBtnPopupNewPost(true)}>
+        Post
+      </button>
 
       <Popup trigger={btnPopup} setTrigger={setBtnPopup}>
         <div className='function-no-avaible'>
@@ -95,6 +100,10 @@ export const SideBar = () => {
           />
         </div>
       </Popup>
+
+      <PopupNewPosts trigger={btnPopupNewPost} setTrigger={setBtnPopupNewPost}>
+        <NewPostTwitter />
+      </PopupNewPosts>
 
       <PopupPremium trigger={btnPopupPremium} setTrigger={setBtnPopupPremium}>
         <PPPremium />

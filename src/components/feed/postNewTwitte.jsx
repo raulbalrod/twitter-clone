@@ -1,4 +1,8 @@
 export const NewPostTwitter = () => {
+  const addPost = () => {
+    console.log('Adding post');
+  };
+
   return (
     <div className='new-post'>
       <div>
@@ -17,7 +21,9 @@ export const NewPostTwitter = () => {
       <div>
         <input type='file' />
 
-        <button className='feed-new-post-btn'>Post</button>
+        <button onClick={addPost()} className='feed-new-post-btn'>
+          Post
+        </button>
       </div>
     </div>
   );
