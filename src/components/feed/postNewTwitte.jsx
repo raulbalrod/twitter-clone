@@ -7,7 +7,11 @@ export const NewPostTwitter = () => {
           alt='img-profile'
           width='50px'
         />
-        <input type='text' placeholder='What is happening?!' />
+        <textarea
+          name='post'
+          className='textarea-new-post'
+          placeholder='What is happening?!'
+        ></textarea>
       </div>
 
       <div>

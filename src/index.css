@@ -10,7 +10,7 @@ body {
 .feed-new-post-btn, .sideBar-post,.subscribe-premium-btn,
 .who-connect-details-users .follow-btn, .profile-details .follow-btn,
 .who-to-follow .follow-btn, .sideBar .btn-popup-sidebar,
-.div-premium-popup .subscibe-btn, .popup-inner .done-btn  {
+.div-premium-popup .subscibe-btn, .popup-inner .done-btn, .new-post div:nth-child(1) .textarea-new-post   {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
