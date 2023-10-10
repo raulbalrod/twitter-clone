@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './WhoConnect.css';
 
 import { Verified } from '@mui/icons-material';
+import { BtnFollow } from './followBtn';
 
 export const WhoToFollowsPage = ({
   name,
@@ -44,7 +45,7 @@ export const WhoToFollowsPage = ({
           </Link>
         </div>
 
-        <button className='follow-btn'>Follow</button>
+        <BtnFollow />
       </div>
 
       <p>{description}</p>

@@ -6,7 +6,6 @@ export const IndividualPost = ({
   userName,
   name,
   isVerified,
-  datePosted,
   views,
   text,
   mediaPost,

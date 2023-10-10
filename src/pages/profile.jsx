@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { SideBar } from '../components/menu/sideBar';
 import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
+import { BtnFollow } from '../components/widgets/whoToFollow/followBtn';
 
 export const ProfilePage = () => {
   const { usernamePost } = useParams();
@@ -24,7 +25,7 @@ export const ProfilePage = () => {
               width='120px'
               height='120px'
             />
-            <button className='follow-btn'>Follow</button>
+            <BtnFollow />
           </div>
 
           <div className='data-profile-details'>

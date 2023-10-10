@@ -58,21 +58,67 @@
     display: none;
 }
 
-
-.who-connect-details-users .follow-btn {
-    border: none;
-    font-weight: 700;
-    height: 30px;
-    border-radius: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-    cursor: pointer;
-}
-
 .who-connect-page p {
     font-size: 14px;
 }
 
 .verified-who-connect b:hover {
     text-decoration: underline;
+}
+
+
+
+
+.tw-followCard-button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 2px 16px;
+    font-weight: 600;
+    border: 1px solid #15202b;
+    transition: .3s ease background-color;
+}
+
+.tw-followCard-button:hover {
+    opacity: .8;
+}
+
+.tw-followCard-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 1px;
+}
+
+.tw-followCard-button.is-following {
+    border: 1px solid #dedede9f;
+    background: transparent;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.tw-followCard-button.is-following:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.178);
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    transition: .3s ease all;
+    opacity: 1;
+    width: fit-content;
+    height: 30px;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+    display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+    display: block;
+}
+
+.tw-followCard-stopFollow {
+    display: none;
 }

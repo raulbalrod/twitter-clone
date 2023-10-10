@@ -10,23 +10,31 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 
 import { NewPostTwitter } from './postNewTwitte';
 import { homePosts } from '../../data/posts/homePosts';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const FeedTwitter = () => {
-  const [postText, setPostText] = useState('');
   const [newPosts, setNewPosts] = useState([]);
 
   const addNewPost = (text) => {
     const newPost = {
-      text: text,
       id: Date.now(),
+      text: text,
       name: 'Raul Balrod',
       username: 'raulbalrod',
     };
+
     setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
+
+    const allPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    allPosts.unshift(newPost);
+    localStorage.setItem('posts', JSON.stringify(allPosts));
   };
 
-  const combinedPosts = [...homePosts, ...newPosts];
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    const combinedPosts = [...storedPosts, ...homePosts];
+    setNewPosts(combinedPosts);
+  }, []);
 
   return (
     <div className='feed'>
@@ -39,9 +47,8 @@ export const FeedTwitter = () => {
       </div>
 
       <div className='posts'>
-        {combinedPosts
+        {newPosts
           .filter((post) => post.id > 31)
-          .reverse()
           .map((post) => (
             <PostTwitter
               userName={post.username}

@@ -56,7 +56,7 @@ export const PostTwitter = ({
                 · {timePosted}
               </span>
             </div>
-            <p>{text}</p>
+            <p className='text-post'>{text}</p>
 
             <img src={mediaPost} className='post-img' alt='' />
           </div>

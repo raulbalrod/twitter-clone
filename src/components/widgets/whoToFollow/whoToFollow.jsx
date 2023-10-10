@@ -1,5 +1,6 @@
 import { Verified } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { BtnFollow } from './followBtn';
 
 export const WhoToFollows = ({ name, userName, isVerified }) => {
   return (
@@ -33,7 +34,7 @@ export const WhoToFollows = ({ name, userName, isVerified }) => {
         </Link>
       </div>
 
-      <button className='follow-btn'>Follow</button>
+      <BtnFollow />
     </div>
   );
 };

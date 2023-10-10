@@ -9,20 +9,20 @@
 }
 
 .post {
-
   color: #fff;
   display: flex;
   flex-direction: column;
   height: max-content;
-  padding: 15px;
+  width: 600px;
   border-bottom: 1px solid #dedede9f;
 }
   
 .post .post-content {
   display: flex;
+  padding: 15px;
   gap: 16px;
 }
-  
+
 .post ul {
   display: flex;
   justify-content: space-around;
