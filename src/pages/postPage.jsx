@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import './PostPage.css';
 
@@ -13,14 +13,34 @@ import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
 import { IndividualPost } from '../components/individualPost/individualPost';
 import { ReplyPost } from '../components/feed/replyPost';
-import { replys } from '../data/posts/replys';
 import { Replys } from '../components/individualPost/replys';
+import { useEffect, useState } from 'react';
 
 export const IndividualPostPage = () => {
   const { usernamePost } = useParams();
   const post = getPostDestails(usernamePost);
 
-  const randomNum = Math.floor(Math.random() * 10);
+  const [newReplys, setNewReplys] = useState([]);
+
+  const addNewReply = (text) => {
+    const newReply = {
+      id: Date.now(),
+      text: text,
+      name: 'Raul Balrod',
+      username: 'raulbalrod',
+    };
+    setNewReplys((prevReplys) => [newReply, ...prevReplys]);
+
+    const storedReplys = JSON.parse(localStorage.getItem('replys')) || [];
+    storedReplys.unshift(newReply);
+    localStorage.setItem('replys', JSON.stringify(storedReplys));
+  };
+
+  useEffect(() => {
+    const storedReplys = JSON.parse(localStorage.getItem('replys')) || [];
+    const combinedReplys = [...newReplys, ...storedReplys];
+    setNewReplys(combinedReplys);
+  }, []);
 
   return (
     <div className='app'>
@@ -43,11 +63,11 @@ export const IndividualPostPage = () => {
             key={post.id}
           />
           <div className='post-new-twitte'>
-            <ReplyPost />
+            <ReplyPost onReplyText={addNewReply} />
           </div>
 
           <div className='replys'>
-            {replys.slice(0, randomNum).map((reply) => (
+            {newReplys.map((reply) => (
               <Replys
                 userNameReply={reply.username}
                 name={reply.name}

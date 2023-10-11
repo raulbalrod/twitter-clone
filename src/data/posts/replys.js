@@ -41,6 +41,8 @@ export const replys = [
       numsLikes: '5,116',
       numsViews: '91.7k'
     },
+    /*
+    
     {
       id: 5,
       name: newUsers[4].name,
@@ -107,5 +109,6 @@ export const replys = [
       numsLikes: '5,289',
       numsViews: '94.6k'
     },
+    */
 ];
   

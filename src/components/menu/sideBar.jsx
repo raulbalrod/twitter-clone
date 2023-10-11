@@ -15,7 +15,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 import { Link } from 'react-router-dom';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Popup } from '../popups/popup';
 import { PopupPremium } from '../popups/popupPremium';
 import { PPPremium } from '../popups/ppPremium';
@@ -23,6 +23,7 @@ import { PopupChangeStyles } from '../popups/popupChangeStyle';
 import { PPStyles } from '../popups/ppStyles';
 import { PopupNewPosts } from '../popups/popupNewPost';
 import { NewPostTwitter } from '../feed/postNewTwitte';
+import { homePosts } from '../../data/posts/homePosts';
 
 export const SideBar = () => {
   const [btnPopup, setBtnPopup] = useState(false);
@@ -30,16 +31,28 @@ export const SideBar = () => {
   const [btnPopupChangeStyle, setBtnPopupChangeStyle] = useState(false);
   const [btnPopupNewPost, setBtnPopupNewPost] = useState(false);
 
-  const [postText, setPostText] = useState('');
   const [newPosts, setNewPosts] = useState([]);
 
   const addNewPost = (text) => {
     const newPost = {
-      text: text,
       id: Date.now(),
+      text: text,
+      name: 'Raul Balrod',
+      username: 'raulbalrod',
     };
+
     setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
+
+    const allPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    allPosts.unshift(newPost);
+    localStorage.setItem('posts', JSON.stringify(allPosts));
   };
+
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    const combinedPosts = [...storedPosts, ...homePosts];
+    setNewPosts(combinedPosts);
+  }, []);
 
   return (
     <div className='sideBar'>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 export const NewPostTwitter = ({ onPostText }) => {
-  const [username, setUsername] = useState('raulbalrod');
+  const username = 'raulbalrod';
   const [text, setText] = useState('');
 
-  const handleTextChange = (event) => {
-    setText(event.target.value);
+  const handleTextChange = (e) => {
+    setText(e.target.value);
   };
 
   const handlePostClick = () => {
@@ -21,6 +21,7 @@ export const NewPostTwitter = ({ onPostText }) => {
           alt='img-profile'
           width='50px'
         />
+
         <textarea
           name='post'
           className='textarea-new-post'
@@ -28,10 +29,6 @@ export const NewPostTwitter = ({ onPostText }) => {
           value={text}
           onChange={handleTextChange}
         ></textarea>
-      </div>
-
-      <div>
-        <input type='file' />
 
         <button onClick={handlePostClick} className='feed-new-post-btn'>
           Post

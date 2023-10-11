@@ -1,8 +1,7 @@
 import { Verified } from '@mui/icons-material';
 
 import './Reply.css';
-import { Link, useParams } from 'react-router-dom';
-import { getPostDestails } from '../../utils/post';
+import { Link } from 'react-router-dom';
 
 export const Replys = ({
   userNameReply,

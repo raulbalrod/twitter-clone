@@ -1,9 +1,25 @@
-export const ReplyPost = () => {
+import React, { useState } from 'react';
+
+export const ReplyPost = ({ onReplyText }) => {
+  const username = 'raulbalrod';
+  const [text, setText] = useState('');
+
+  const handleTextChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const handlePostClick = () => {
+    if (text.trim() !== '') {
+      onReplyText(text);
+      setText('');
+    }
+  };
+
   return (
     <div className='new-post'>
       <div>
         <img
-          src='https://unavatar.io/raulbalrod'
+          src={`https://unavatar.io/${username}`}
           alt='img-profile'
           width='50px'
         />
@@ -11,8 +27,12 @@ export const ReplyPost = () => {
           name='post'
           className='textarea-new-post'
           placeholder='Post your reply'
+          value={text} // Enlaza el valor del textarea con el estado 'text'
+          onChange={handleTextChange}
         ></textarea>
-        <button className='feed-new-post-btn'>Reply</button>
+        <button className='feed-new-post-btn' onClick={handlePostClick}>
+          Reply
+        </button>
       </div>
     </div>
   );
