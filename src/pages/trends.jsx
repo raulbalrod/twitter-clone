@@ -1,4 +1,4 @@
-import { SideBar } from '../components/menu/sideBar';
+import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
 import { TredingTopicsPage } from '../components/widgets/trendingTopics/trendingPage';
 import { WidgetsTwitterTrendings } from '../components/widgets/widgetsTrends';
 import { trendingTopics } from '../data/widgets/trendingTopics';
@@ -6,7 +6,7 @@ import { trendingTopics } from '../data/widgets/trendingTopics';
 export const TrendsPage = () => {
   return (
     <div className='app'>
-      <SideBar />
+      <SideBarNoActiveHome />
 
       <div className='all-trends'>
         <h2 style={{ borderBottom: '1px solid #dedede9f' }}>Trends</h2>

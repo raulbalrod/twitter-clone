@@ -1,4 +1,4 @@
-import { SideBar } from '../components/menu/sideBar';
+import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
 import { WhoToFollowsPage } from '../components/widgets/whoToFollow/whoToFollowPage';
 import { WidgetConnect } from '../components/widgets/widgetsConnect';
 import { newUsers } from '../data/widgets/newUsers';
@@ -6,7 +6,7 @@ import { newUsers } from '../data/widgets/newUsers';
 export const ConnectPeople = () => {
   return (
     <div className='app'>
-      <SideBar />
+      <SideBarNoActiveHome />
 
       <div className='new-users'>
         <h2 style={{ borderBottom: '1px solid #dedede9f' }}>Connect</h2>

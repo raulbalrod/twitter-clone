@@ -2,10 +2,10 @@ import './ProfilePage.css';
 
 import { useParams } from 'react-router-dom';
 
-import { SideBar } from '../components/menu/sideBar';
 import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
 import { BtnFollow } from '../components/widgets/whoToFollow/followBtn';
+import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
 
 export const ProfilePage = () => {
   const { usernamePost } = useParams();
@@ -13,7 +13,7 @@ export const ProfilePage = () => {
 
   return (
     <div className='app'>
-      <SideBar />
+      <SideBarNoActiveHome />
 
       <div className='profile-details'>
         <div className='content-profile-details'>

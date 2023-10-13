@@ -8,13 +8,13 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
-import { SideBar } from '../components/menu/sideBar';
 import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
 import { IndividualPost } from '../components/individualPost/individualPost';
 import { ReplyPost } from '../components/feed/replyPost';
 import { Replys } from '../components/individualPost/replys';
 import { useEffect, useState } from 'react';
+import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
 
 export const IndividualPostPage = () => {
   const { usernamePost } = useParams();
@@ -44,7 +44,7 @@ export const IndividualPostPage = () => {
 
   return (
     <div className='app'>
-      <SideBar />
+      <SideBarNoActiveHome />
 
       <div className='individual-posts'>
         <h2>Post</h2>

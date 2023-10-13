@@ -2,12 +2,12 @@ import { Verified } from '@mui/icons-material';
 
 import './Reply.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Replys = ({
   userNameReply,
   name,
   isVerified,
-  timePosted,
   text,
   CommentIcon,
   RepeatIcon,
@@ -18,6 +18,34 @@ export const Replys = ({
   numsLikes,
   numsViews,
 }) => {
+  const [isLike, setIsLike] = useState(false);
+
+  const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
+
+  const handleclickLike = () => {
+    setIsLike(!isLike);
+  };
+
+  const [isReposted, setIsReposted] = useState(false);
+
+  const repostedClassName = isReposted
+    ? 'tw-repost-button is-reposting'
+    : 'tw-repost-button';
+
+  const handleclickReposted = () => {
+    setIsReposted(!isReposted);
+  };
+
+  const [isComment, setIsComment] = useState(false);
+
+  const commentClassName = isComment
+    ? 'tw-comment-button is-commenting'
+    : 'tw-comment-button';
+
+  const handleclickComment = () => {
+    setIsComment(!isComment);
+  };
+
   return (
     <div className='reply'>
       <div className='reply-content'>
@@ -49,8 +77,7 @@ export const Replys = ({
                 style={{ textDecoration: 'none', color: ' #dedede9f' }}
               >
                 @{userNameReply}
-              </Link>{' '}
-              · {timePosted}
+              </Link>
             </span>
           </div>
           <p>{text}</p>
@@ -58,17 +85,29 @@ export const Replys = ({
       </div>
 
       <ul>
-        <li>
-          <CommentIcon /> {numsComments}
+        <li className={commentClassName} onClick={handleclickComment}>
+          <div className='comment-svg-icon'>
+            <CommentIcon />
+          </div>
+          {numsComments}
+        </li>
+        <li className={repostedClassName} onClick={handleclickReposted}>
+          <div className='reply-svg-icon'>
+            <RepeatIcon />
+          </div>
+          {numsRetweets}
+        </li>
+        <li className={likeClassName} onClick={handleclickLike}>
+          <div className='like-svg-icon'>
+            <LikeIcon />
+          </div>
+          {numsLikes}
         </li>
         <li>
-          <RepeatIcon /> {numsRetweets}
-        </li>
-        <li>
-          <LikeIcon /> {numsLikes}
-        </li>
-        <li>
-          <ViewsIcon /> {numsViews}
+          <div className='comment-svg-icon'>
+            <ViewsIcon />
+          </div>
+          {numsViews}
         </li>
       </ul>
     </div>

@@ -1,6 +1,6 @@
 import { Verified } from '@mui/icons-material';
-import { IteractionPost } from '../iteractionPost';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const IndividualPost = ({
   userName,
@@ -14,6 +14,33 @@ export const IndividualPost = ({
   LikeIcon,
   ViewsIcon,
 }) => {
+  const [isLike, setIsLike] = useState(false);
+
+  const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
+
+  const handleclickLike = () => {
+    setIsLike(!isLike);
+  };
+
+  const [isReposted, setIsReposted] = useState(false);
+
+  const repostedClassName = isReposted
+    ? 'tw-repost-button is-reposting'
+    : 'tw-repost-button';
+
+  const handleclickReposted = () => {
+    setIsReposted(!isReposted);
+  };
+
+  const [isComment, setIsComment] = useState(false);
+
+  const commentClassName = isComment
+    ? 'tw-comment-button is-commenting'
+    : 'tw-comment-button';
+
+  const handleclickComment = () => {
+    setIsComment(!isComment);
+  };
   return (
     <div className='individual-post'>
       <div className='individual-post-content'>
@@ -63,12 +90,28 @@ export const IndividualPost = ({
         </div>
       </div>
 
-      <IteractionPost
-        CommentIcon={CommentIcon}
-        RepeatIcon={RepeatIcon}
-        LikeIcon={LikeIcon}
-        ViewsIcon={ViewsIcon}
-      />
+      <ul>
+        <li className={commentClassName} onClick={handleclickComment}>
+          <div className='comment-svg-icon'>
+            <CommentIcon />
+          </div>
+        </li>
+        <li className={repostedClassName} onClick={handleclickReposted}>
+          <div className='reply-svg-icon'>
+            <RepeatIcon />
+          </div>
+        </li>
+        <li className={likeClassName} onClick={handleclickLike}>
+          <div className='like-svg-icon'>
+            <LikeIcon />
+          </div>
+        </li>
+        <li>
+          <div className='comment-svg-icon'>
+            <ViewsIcon />
+          </div>
+        </li>
+      </ul>
     </div>
   );
 };
