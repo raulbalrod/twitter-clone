@@ -16,7 +16,11 @@
   width: 600px;
   border-bottom: 1px solid #dedede9f;
 }
-  
+ 
+.post:hover {
+  background-color: rgba(169, 169, 169, 0.05);
+}
+
 .post .post-content {
   display: flex;
   flex-direction: column;
