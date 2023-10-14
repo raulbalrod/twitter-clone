@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export const Replys = ({
-  userNameReply,
-  name,
   isVerified,
   text,
   CommentIcon,
@@ -53,6 +51,9 @@ export const Replys = ({
   const handleclickComment = () => {
     setIsComment(!isComment);
   };
+
+  const name = localStorage.getItem('githubName');
+  const userNameReply = localStorage.getItem('githubUsername');
 
   return (
     <div className='reply'>

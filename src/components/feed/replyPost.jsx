@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 export const ReplyPost = ({ onReplyText }) => {
-  const username = 'raulbalrod';
+  const nombreUsuarioGitHub = localStorage.getItem('githubUsername');
+
   const [text, setText] = useState('');
 
   const handleTextChange = (e) => {
@@ -19,7 +20,7 @@ export const ReplyPost = ({ onReplyText }) => {
     <div className='new-post'>
       <div>
         <img
-          src={`https://unavatar.io/${username}`}
+          src={`https://unavatar.io/${nombreUsuarioGitHub}`}
           alt='img-profile'
           width='50px'
         />

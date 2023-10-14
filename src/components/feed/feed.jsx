@@ -15,12 +15,15 @@ import { useEffect, useState } from 'react';
 export const FeedTwitter = () => {
   const [newPosts, setNewPosts] = useState([]);
 
+  const nombreDeUsuario = localStorage.getItem('githubName');
+  const nombreUsuarioGitHub = localStorage.getItem('githubUsername');
+
   const addNewPost = (text) => {
     const newPost = {
       id: Date.now(),
       text: text,
-      name: 'Raul Balrod',
-      username: 'raulbalrod',
+      name: nombreDeUsuario,
+      username: nombreUsuarioGitHub,
     };
 
     setNewPosts((prevNewPosts) => [newPost, ...prevNewPosts]);
