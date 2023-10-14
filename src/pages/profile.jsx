@@ -4,12 +4,29 @@ import { useParams } from 'react-router-dom';
 
 import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
-import { BtnFollow } from '../components/widgets/whoToFollow/followBtn';
 import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
+import { useEffect, useState } from 'react';
 
 export const ProfilePage = () => {
   const { usernamePost } = useParams();
   const post = getPostDestails(usernamePost);
+
+  const [isFollowing, setIsFollowing] = useState(
+    localStorage.getItem(`follow_${post.username}`) === 'true'
+  );
+  const text = isFollowing ? 'Following' : 'Follow';
+
+  const buttonClassName = isFollowing
+    ? 'tw-followCard-button is-following'
+    : 'tw-followCard-button';
+
+  const handleclick = () => {
+    setIsFollowing(!isFollowing);
+  };
+
+  useEffect(() => {
+    localStorage.setItem(`follow_${post.username}`, isFollowing);
+  }, [isFollowing, post.username]);
 
   return (
     <div className='app'>
@@ -25,7 +42,11 @@ export const ProfilePage = () => {
               width='120px'
               height='120px'
             />
-            <BtnFollow />
+
+            <button className={buttonClassName} onClick={handleclick}>
+              <p className='tw-followCard-text'>{text}</p>
+              <p className='tw-followCard-stopFollow'>Unfollow</p>
+            </button>
           </div>
 
           <div className='data-profile-details'>

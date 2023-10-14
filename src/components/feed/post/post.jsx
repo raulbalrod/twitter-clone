@@ -2,7 +2,7 @@ import { Verified } from '@mui/icons-material';
 
 import './Post.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const PostTwitter = ({
   userName,
@@ -20,29 +20,37 @@ export const PostTwitter = ({
   numsLikes,
   numsViews,
 }) => {
-  const [isLike, setIsLike] = useState(false);
+  const [isLike, setIsLike] = useState(
+    localStorage.getItem(`like_${id}`) === 'true'
+  );
+  const [isReposted, setIsReposted] = useState(
+    localStorage.getItem(`repost_${id}`) === 'true'
+  );
+  const [isComment, setIsComment] = useState(
+    localStorage.getItem(`comment_${id}`) === 'true'
+  );
 
   const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
+  const repostedClassName = isReposted
+    ? 'tw-repost-button is-reposting'
+    : 'tw-repost-button';
+  const commentClassName = isComment
+    ? 'tw-comment-button is-commenting'
+    : 'tw-comment-button';
+
+  useEffect(() => {
+    localStorage.setItem(`like_${id}`, isLike);
+    localStorage.setItem(`repost_${id}`, isReposted);
+    localStorage.setItem(`comment_${id}`, isComment);
+  }, [isLike, isReposted, isComment, id]);
 
   const handleclickLike = () => {
     setIsLike(!isLike);
   };
 
-  const [isReposted, setIsReposted] = useState(false);
-
-  const repostedClassName = isReposted
-    ? 'tw-repost-button is-reposting'
-    : 'tw-repost-button';
-
   const handleclickReposted = () => {
     setIsReposted(!isReposted);
   };
-
-  const [isComment, setIsComment] = useState(false);
-
-  const commentClassName = isComment
-    ? 'tw-comment-button is-commenting'
-    : 'tw-comment-button';
 
   const handleclickComment = () => {
     setIsComment(!isComment);

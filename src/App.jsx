@@ -6,12 +6,14 @@ import { IndividualPostPage } from './pages/postPage';
 import { ConnectPeople } from './pages/connectPeople';
 import { TrendsPage } from './pages/trends';
 import { ProfilePage } from './pages/profile';
+import { LoginPage } from './pages/loginPage';
 
 function App() {
   return (
     <BrowserRouter basename='/'>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route
           path='/:usernamePost/status/:id'

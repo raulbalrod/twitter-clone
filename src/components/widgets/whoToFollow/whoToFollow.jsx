@@ -1,8 +1,25 @@
 import { Verified } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import { BtnFollow } from './followBtn';
+import { useEffect, useState } from 'react';
 
 export const WhoToFollows = ({ name, userName, isVerified }) => {
+  const [isFollowing, setIsFollowing] = useState(
+    localStorage.getItem(`follow_${userName}`) === 'true'
+  );
+  const text = isFollowing ? 'Following' : 'Follow';
+
+  const buttonClassName = isFollowing
+    ? 'tw-followCard-button is-following'
+    : 'tw-followCard-button';
+
+  const handleclick = () => {
+    setIsFollowing(!isFollowing);
+  };
+
+  useEffect(() => {
+    localStorage.setItem(`follow_${userName}`, isFollowing);
+  }, [isFollowing, userName]);
+
   return (
     <div className='who-to-follow'>
       <Link to={`/${userName}`} style={{ textDecoration: 'none' }}>
@@ -34,7 +51,10 @@ export const WhoToFollows = ({ name, userName, isVerified }) => {
         </Link>
       </div>
 
-      <BtnFollow />
+      <button className={buttonClassName} onClick={handleclick}>
+        <p className='tw-followCard-text'>{text}</p>
+        <p className='tw-followCard-stopFollow'>Unfollow</p>
+      </button>
     </div>
   );
 };
