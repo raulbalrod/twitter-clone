@@ -31,6 +31,7 @@ export const PostTwitter = ({
   );
 
   const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
+
   const repostedClassName = isReposted
     ? 'tw-repost-button is-reposting'
     : 'tw-repost-button';

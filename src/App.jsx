@@ -12,8 +12,7 @@ function App() {
   return (
     <BrowserRouter basename='/'>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/' element={<LoginPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route
           path='/:usernamePost/status/:id'

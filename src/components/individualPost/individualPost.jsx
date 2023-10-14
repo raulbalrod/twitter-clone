@@ -15,13 +15,13 @@ export const IndividualPost = ({
   ViewsIcon,
 }) => {
   const [isLike, setIsLike] = useState(
-    localStorage.getItem(`like_reply`) === 'true'
+    localStorage.getItem(`like_reply_2`) === 'true'
   );
   const [isReposted, setIsReposted] = useState(
-    localStorage.getItem(`repost_reply`) === 'true'
+    localStorage.getItem(`repost_reply_2`) === 'true'
   );
   const [isComment, setIsComment] = useState(
-    localStorage.getItem(`comment_reply`) === 'true'
+    localStorage.getItem(`comment_reply_2`) === 'true'
   );
 
   const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
@@ -33,9 +33,9 @@ export const IndividualPost = ({
     : 'tw-comment-button';
 
   useEffect(() => {
-    localStorage.setItem(`like_reply`, isLike);
-    localStorage.setItem(`repost_reply`, isReposted);
-    localStorage.setItem(`comment_reply`, isComment);
+    localStorage.setItem(`like_reply_2`, isLike);
+    localStorage.setItem(`repost_reply_2`, isReposted);
+    localStorage.setItem(`comment_reply_2`, isComment);
   }, [isLike, isReposted, isComment]);
 
   const handleclickLike = () => {
@@ -49,6 +49,7 @@ export const IndividualPost = ({
   const handleclickComment = () => {
     setIsComment(!isComment);
   };
+
   return (
     <div className='individual-post'>
       <div className='individual-post-content'>
@@ -92,8 +93,7 @@ export const IndividualPost = ({
         <img src={mediaPost} className='individual-post-img' alt='' />
         <div className='details-post-publication'>
           <p>
-            1:02 PM · Oct 7, 2023 {/* Date of public */} · <b>1,354{views}</b>{' '}
-            Views{' '}
+            1:02 PM · Oct 7, 2023 · <b>1,354{views}</b> Views
           </p>
         </div>
       </div>

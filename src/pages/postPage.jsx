@@ -12,9 +12,9 @@ import { WidgetsTwitter } from '../components/widgets/widgets';
 import { getPostDestails } from '../utils/post';
 import { IndividualPost } from '../components/individualPost/individualPost';
 import { ReplyPost } from '../components/feed/replyPost';
-import { Replys } from '../components/individualPost/replys';
 import { useEffect, useState } from 'react';
 import { SideBarNoActiveHome } from '../components/menu/sidebarNoActive';
+import { Replys } from '../components/individualPost/replys';
 
 export const IndividualPostPage = () => {
   const { usernamePost } = useParams();
@@ -22,18 +22,21 @@ export const IndividualPostPage = () => {
 
   const [newReplys, setNewReplys] = useState([]);
 
+  const nombreDeUsuario = localStorage.getItem('githubName');
+  const nombreUsuarioGitHub = localStorage.getItem('githubUsername');
+
   const addNewReply = (text) => {
     const newReply = {
       id: Date.now(),
       text: text,
-      name: 'Raul Balrod',
-      username: 'raulbalrod',
+      name: nombreDeUsuario,
+      username: nombreUsuarioGitHub,
     };
     setNewReplys((prevReplys) => [newReply, ...prevReplys]);
 
-    const storedReplys = JSON.parse(localStorage.getItem('replys')) || [];
-    storedReplys.unshift(newReply);
-    localStorage.setItem('replys', JSON.stringify(storedReplys));
+    const allReplys = JSON.parse(localStorage.getItem('replys')) || [];
+    allReplys.unshift(newReply);
+    localStorage.setItem('replys', JSON.stringify(allReplys));
   };
 
   useEffect(() => {
@@ -69,7 +72,7 @@ export const IndividualPostPage = () => {
           <div className='replys'>
             {newReplys.map((reply) => (
               <Replys
-                userNameReply={reply.username}
+                userName={reply.username}
                 name={reply.name}
                 text={reply.text}
                 isVerified={reply.isVerified}
@@ -78,10 +81,7 @@ export const IndividualPostPage = () => {
                 LikeIcon={FavoriteBorderIcon}
                 CommentIcon={ChatBubbleOutlineIcon}
                 ViewsIcon={EqualizerIcon}
-                numsComments={reply.numsComments}
-                numsRetweets={reply.numsRetweets}
-                numsLikes={reply.numsLikes}
-                numsViews={reply.numsViews}
+                id={reply.id}
                 key={reply.id}
               />
             ))}

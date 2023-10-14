@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export const Replys = ({
+  userName,
+  id,
+  name,
   isVerified,
   text,
   CommentIcon,
@@ -17,16 +20,17 @@ export const Replys = ({
   numsViews,
 }) => {
   const [isLike, setIsLike] = useState(
-    localStorage.getItem(`like_reply`) === 'true'
+    localStorage.getItem(`like_${id}`) === 'true'
   );
   const [isReposted, setIsReposted] = useState(
-    localStorage.getItem(`repost_reply`) === 'true'
+    localStorage.getItem(`repost_${id}`) === 'true'
   );
   const [isComment, setIsComment] = useState(
-    localStorage.getItem(`comment_reply`) === 'true'
+    localStorage.getItem(`comment_${id}`) === 'true'
   );
 
   const likeClassName = isLike ? 'tw-like-button is-liking' : 'tw-like-button';
+
   const repostedClassName = isReposted
     ? 'tw-repost-button is-reposting'
     : 'tw-repost-button';
@@ -35,10 +39,10 @@ export const Replys = ({
     : 'tw-comment-button';
 
   useEffect(() => {
-    localStorage.setItem(`like_reply`, isLike);
-    localStorage.setItem(`repost_reply`, isReposted);
-    localStorage.setItem(`comment_reply`, isComment);
-  }, [isLike, isReposted, isComment]);
+    localStorage.setItem(`like_${id}`, isLike);
+    localStorage.setItem(`repost_${id}`, isReposted);
+    localStorage.setItem(`comment_${id}`, isComment);
+  }, [isLike, isReposted, isComment, id]);
 
   const handleclickLike = () => {
     setIsLike(!isLike);
@@ -52,15 +56,12 @@ export const Replys = ({
     setIsComment(!isComment);
   };
 
-  const name = localStorage.getItem('githubName');
-  const userNameReply = localStorage.getItem('githubUsername');
-
   return (
     <div className='reply'>
       <div className='reply-content'>
-        <Link to={`/${userNameReply}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/${userName}`} style={{ textDecoration: 'none' }}>
           <img
-            src={`https://unavatar.io/${userNameReply}`}
+            src={`https://unavatar.io/${userName}`}
             alt='avatar-profile-img'
             className='avatar-profile-img'
             width='50px'
@@ -70,7 +71,7 @@ export const Replys = ({
         <div className='reply-details'>
           <div className='reply-username-data'>
             <Link
-              to={`/${userNameReply}`}
+              to={`/${userName}`}
               style={{ textDecoration: 'none', color: ' #fff' }}
             >
               <b>{name}</b>
@@ -82,10 +83,10 @@ export const Replys = ({
             />
             <span>
               <Link
-                to={`/${userNameReply}`}
+                to={`/${userName}`}
                 style={{ textDecoration: 'none', color: ' #dedede9f' }}
               >
-                @{userNameReply}
+                @{userName}
               </Link>
             </span>
           </div>
