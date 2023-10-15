@@ -37,7 +37,7 @@ export const WidgetsTwitter = () => {
             userName={user.username}
             isVerified={user.isVerified}
             initialIsFollowing={user.isFollowing}
-            key={user.id}
+            key={user.username}
           />
         ))}
 
