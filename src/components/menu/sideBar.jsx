@@ -14,8 +14,10 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
+
 import { Popup } from '../popups/popup';
 import { PopupPremium } from '../popups/popupPremium';
 import { PPPremium } from '../popups/ppPremium';
@@ -24,12 +26,14 @@ import { PPStyles } from '../popups/ppStyles';
 import { PopupNewPosts } from '../popups/popupNewPost';
 import { NewPostTwitter } from '../feed/postNewTwitte';
 import { homePosts } from '../../data/posts/homePosts';
+import { PopupLogOut } from '../popups/popupLogOut';
 
 export const SideBar = () => {
   const [btnPopup, setBtnPopup] = useState(false);
   const [btnPopupPremium, setBtnPopupPremium] = useState(false);
   const [btnPopupChangeStyle, setBtnPopupChangeStyle] = useState(false);
   const [btnPopupNewPost, setBtnPopupNewPost] = useState(false);
+  const [btnPopupLogOut, setBtnPopupLogOut] = useState(false);
 
   const [newPosts, setNewPosts] = useState([]);
 
@@ -53,6 +57,11 @@ export const SideBar = () => {
     const combinedPosts = [...storedPosts, ...homePosts];
     setNewPosts(combinedPosts);
   }, []);
+
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate('/');
+  };
 
   return (
     <div className='sideBar'>
@@ -95,7 +104,10 @@ export const SideBar = () => {
         <SideBarOption Icon={TwitterIcon} textIcon='Premium' />
       </button>
 
-      <button className='btn-popup-sidebar' onClick={() => setBtnPopup(true)}>
+      <button
+        className='btn-popup-sidebar'
+        onClick={() => setBtnPopupLogOut(true)}
+      >
         <SideBarOption Icon={PersonOutlineIcon} textIcon='Profile' />
       </button>
 
@@ -139,6 +151,23 @@ export const SideBar = () => {
       >
         <PPStyles />
       </PopupChangeStyles>
+
+      <PopupLogOut trigger={btnPopupLogOut} setTrigger={setBtnPopupLogOut}>
+        <div className='log-out-popup'>
+          <img
+            src='https://freelogopng.com/images/all_img/1690643777twitter-x%20logo-png-white.png'
+            alt='twitter-img'
+            width='100px'
+            height='100px'
+          />
+          <h3>Log out of X?</h3>
+          <p>
+            You can always log back in at any time. If you just want to switch
+            accounts, you can do that by adding an existing account.
+          </p>
+          <button onClick={handleLogin}>Log out</button>
+        </div>
+      </PopupLogOut>
     </div>
   );
 };

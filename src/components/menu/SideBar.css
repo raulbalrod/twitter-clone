@@ -66,3 +66,30 @@
     background-color: transparent;
     border: none;
 }
+
+
+.log-out-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner-v2 p {
+    color: #dedede9f;
+}
+
+.popup-inner-v2 button {
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #15202b;
+
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60%;
+}

@@ -21,6 +21,15 @@
     border-radius: 20px;
 }
 
+.popup-inner-v2 {
+    position: relative;
+    padding: 43px;
+    width: 100%;
+    max-width: 340px;
+    background-color: #15202b;
+    border-radius: 20px;
+}
+
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
@@ -31,10 +40,23 @@
     cursor: pointer;
 }
 
-.popup-inner .done-btn:hover {
-    background-color: rgba(29, 156, 240, 0.9);
-}
+.popup-inner-v2 .cancel-btn {
+    margin-top: 30px;
+    margin-left: 20%;
 
+    border: 1px solid #dedede9f;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60%;
+}
 
 
 .function-no-avaible {

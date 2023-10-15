@@ -9,10 +9,14 @@ export const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    localStorage.setItem('githubName', name);
-    localStorage.setItem('githubUsername', githubUsername);
+    if (name.trim() === '' || githubUsername.trim() === '') {
+      alert('Por favor, complete todos los campos.');
+    } else {
+      localStorage.setItem('githubName', name);
+      localStorage.setItem('githubUsername', githubUsername);
 
-    navigate('/home');
+      navigate('/home');
+    }
   };
 
   return (
