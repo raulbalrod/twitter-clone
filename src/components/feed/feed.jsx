@@ -36,6 +36,7 @@ export const FeedTwitter = () => {
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
     const combinedPosts = [...storedPosts, ...homePosts];
+    localStorage.setItem('posts', JSON.stringify(combinedPosts));
     setNewPosts(combinedPosts);
   }, []);
 

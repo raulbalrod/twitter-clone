@@ -1,5 +1,3 @@
-import { homePosts } from "../data/posts/homePosts";
-
 export function getPostDestails (usernamePost) {
-    return homePosts.find((post) => post.username === usernamePost);
+    return JSON.parse(localStorage.getItem('posts')).find((post) => post.username === usernamePost);
 }

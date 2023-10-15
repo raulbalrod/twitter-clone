@@ -65,7 +65,7 @@ export const SideBar = () => {
 
   return (
     <div className='sideBar'>
-      <Link to='/' style={{ textDecoration: 'none' }}>
+      <Link to='/home' style={{ textDecoration: 'none' }}>
         <TwitterIcon className='twitter-icon' />
       </Link>
 

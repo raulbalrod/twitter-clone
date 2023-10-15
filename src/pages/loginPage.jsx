@@ -9,7 +9,7 @@ export const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (name.trim() === '' || githubUsername.trim() === '') {
+    if (name === '' || githubUsername === '') {
       alert('Por favor, complete todos los campos.');
     } else {
       localStorage.setItem('githubName', name);
