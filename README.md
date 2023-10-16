@@ -7,6 +7,8 @@ This is a Twitter clone project developed in React. The goal of this application
 - Posting new tweets.
 - Replying to tweets.
 - Following/Unfollowing other users.
+- Do like and repost.
+- Login/ Logout.
 - User profiles.
 
 ## Technologies
