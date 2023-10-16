@@ -394,7 +394,7 @@ export const homePosts = [
     numsViews: '89.9k'
   },
   {
-    id: 269692584297,
+    id: 32,
     name: "Luis Martinez",
     username: "LuisMtz19",
     text: "Enjoying a beautiful sunny day at the beach. 🏖️☀️ #Summer #Relax",
@@ -406,7 +406,7 @@ export const homePosts = [
     numsViews: '94.5k'
   },
   {
-    id: 696325807297,
+    id: 33,
     name: "Isabel Gonzalez",
     username: "IsaGlez",
     text: "Just finished an exciting book I couldn't put down. 📚❤️ #Reading #Bookworm",
@@ -418,7 +418,7 @@ export const homePosts = [
     numsViews: '8,887'
   },
   {
-    id: 696925807327,
+    id: 34,
     name: "Carlos Rodriguez",
     username: "CRodriguez22",
     text: "Watching the latest sci-fi movie. The visual effects are mind-blowing! 🎬🚀 #Movies #SciFi",
@@ -430,7 +430,7 @@ export const homePosts = [
     numsViews: '8,543'
   },
   {
-    id: 696925803397,
+    id: 35,
     name: "Maria Perez",
     username: "MariaPerez7",
     text: "Getting an early morning workout in to stay fit. 💪🏋️‍♀️ #Fitness #Exercise",
@@ -442,7 +442,7 @@ export const homePosts = [
     numsViews: '9,123'
   },
   {
-    id: 694692580727,
+    id: 36,
     name: "David Sanchez",
     username: "DavSanchez",
     text: "Happy birthday to my best friend! 🎉🎂 Wishing you a day full of joy and surprises! #Birthday #Friendship",
@@ -454,7 +454,7 @@ export const homePosts = [
     numsViews: '8,612'
   },
   {
-    id: 649692807297,
+    id: 37,
     name: "Laura Ramirez",
     username: "LauraR24",
     text: "Preparing a delicious dinner for the family tonight. 🍽️👩‍🍳 #Cooking #Family",
@@ -466,7 +466,7 @@ export const homePosts = [
     numsViews: '110.2k'
   },
   {
-    id: 696925207297,
+    id: 38,
     name: "Javier Lopez",
     username: "JaviLopez",
     text: "Heading to my favorite band's concert. I'm so excited! 🎶🤘 #Music #Concert",
@@ -478,7 +478,7 @@ export const homePosts = [
     numsViews: '45.6k'
   },
   {
-    id: 696910807297,
+    id: 39,
     name: "Elena Fernandez",
     username: "ElenaFdez",
     text: "Just returned from an incredible vacation. The trip of a lifetime! ✈️🌴 #Travel #Adventure",
@@ -490,7 +490,7 @@ export const homePosts = [
     numsViews: '8,998'
   },
   {
-    id: 696925807290,
+    id: 40,
     name: "Pedro Ruiz",
     username: "PedroR10",
     text: "Spending the afternoon with my dog at the park. 🐶🌳 #Pets #Nature",
@@ -502,7 +502,7 @@ export const homePosts = [
     numsViews: '6,543'
   },
   {
-    id: 696925805297,
+    id: 41,
     name: "Sofia Torres",
     username: "SofiaT",
     text: "Learning to code in JavaScript. It's an exciting challenge! 💻🚀 #Programming #WebDevelopment",
@@ -514,7 +514,7 @@ export const homePosts = [
     numsViews: '76.1k'
   },
   {
-    id: 696425807297,
+    id: 42,
     name: "Hector Morales",
     username: "HectorM",
     text: "Watching the soccer match with friends. Go team! ⚽🥅 #Soccer #Friends",
@@ -526,7 +526,7 @@ export const homePosts = [
     numsViews: '5,432'
   },
   {
-    id: 496925807297,
+    id: 43,
     name: "Paula Gomez",
     username: "PaulaG",
     text: "Celebrating my graduation today. I've achieved my goal! 🎓🥳 #Graduation #Success",
@@ -538,7 +538,7 @@ export const homePosts = [
     numsViews: '93.7k'
   },
   {
-    id: 696925807297,
+    id: 44,
     name: "Fernando Vargas",
     username: "FernandoV",
     text: "Enjoying a picnic in the park with my family. 🧺👨‍👩‍👧‍👦 #Family #Fun",
@@ -550,7 +550,7 @@ export const homePosts = [
     numsViews: '9,876'
   },
   {
-    id: 696925847297,
+    id: 45,
     name: "Carmen Martin",
     username: "CarmenM",
     text: "Working on my new art project. I hope you'll like it when it's finished! 🎨🖌️ #Art #Creativity",
@@ -562,7 +562,7 @@ export const homePosts = [
     numsViews: '8,765'
   },
   {
-    id: 623925807297,
+    id: 46,
     name: "Antonio Ramos",
     username: "AntonioR",
     text: "Excited to announce that I'll be a dad soon. The excitement is indescribable! 👶🍼 #FutureDad #BabyOnTheWay",
@@ -574,7 +574,7 @@ export const homePosts = [
     numsViews: '9,214',
   },
   {
-    id: 696925804326,
+    id: 47,
     name: "Eva Soto",
     username: "EvaSoto",
     text: "Celebrating our wedding anniversary with a romantic dinner. I love you, darling. ❤️🍷 #Anniversary #Love",
@@ -586,7 +586,7 @@ export const homePosts = [
     numsViews: '89.3k',
   },
   {
-    id: 6969258072932,
+    id: 48,
     name: "Miguel Ortega",
     username: "MiguelO",
     text: "Starting my weight loss journey. Day 1 of a new life! 💪🥗 #Health #Transformation",
@@ -598,7 +598,7 @@ export const homePosts = [
     numsViews: '45.1k',
   },
   {
-    id: 696925807291,
+    id: 49,
     name: "Marina Ruiz",
     username: "MarinaR",
     text: "Enjoying a day of spa and relaxation. I deserve it! 💆‍♀️🌸 #Relaxation #Wellness",
@@ -610,7 +610,7 @@ export const homePosts = [
     numsViews: '21.7k',
   },
   {
-    id: 696925807293,
+    id: 50,
     name: "Raul Sanchez",
     username: "rmsanchez93",
     text: "Cheering on my chess team in the tournament. Let's go for the win! ♟️🏆 #Chess #Strategy",
