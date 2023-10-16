@@ -1,6 +1,6 @@
 # Twitter Clone in React
 
-This is a Twitter clone project developed in React. The goal of this application is to replicate some of the key features of Twitter, including posting tweets, replies, and the ability to "follow" other users.
+This is a Twitter clone project developed in React. The goal of this application is to replicate some of the key features of Twitter, including posting tweets, replies, and the ability to "follow" other users. This clone is only available to use in computer, there aren't mobile version.
 
 ## Features
 
