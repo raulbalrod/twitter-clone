@@ -7,6 +7,8 @@ This is a Twitter clone project developed in React. The goal of this application
 - Posting new tweets.
 - Replying to tweets.
 - Following/Unfollowing other users.
+- Do like and repost.
+- Login/ Logout.
 - User profiles.
 
 ## Technologies
@@ -28,7 +30,7 @@ This project uses the following technologies:
 ![](https://cdn.discordapp.com/attachments/1151495726656929823/1161612693992636507/videotywi.gif?ex=6538ef1f&is=65267a1f&hm=394ae5b6b26535d27b6d94ced7dd7549444711e4369b95d49146a0e239b85705&)
 
 ## Demo
-### [Twitter Clone](https://twitter-clone-raulbalrod.netlify.app)
+### [Twitter Clone](https://twitter-clone-raulbalrod.netlify.app/)
 
 ## Installation
 
